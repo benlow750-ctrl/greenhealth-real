@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sustainability | GreenHealth Pharmacy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<script>
+  // Simple fade-in on load
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".reveal").forEach(el => {
+      setTimeout(() => el.classList.add("is-visible"), 120);
+    });
+  });
+</script>
+
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">
+        <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+      </div>
+      <div>
+        <div class="brand-name">GreenHealth Pharmacy</div>
+        <div class="brand-tagline">Healthier living, zero-waste innovation</div>
+      </div>
+    </a>
+
+    <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+
+        <div class="nav-dropdown">
+          <a class="mainnav-link" href="about.html">
+            ABOUT <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about.html">About Us</a>
+            <a class="dropdown-link" href="vision.html">Vision and Mission</a>
+            <a class="dropdown-link" href="follow-us.html">Follow Us</a>
+            <a class="dropdown-link" href="joinourcommunity.html">Join Our Community</a>
+          </div>
+        </div>
+
+              <!-- ✅ SERVICES dropdown (click to open) -->
+      <div class="nav-dropdown" tabindex="0">
+        <a class="mainnav-link" href="#" aria-haspopup="true" aria-expanded="false">
+          SERVICES <span class="chev">▾</span>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <!-- ✅ Pharmacy Services goes to THIS page -->
+          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+          <!-- ✅ Specialised page -->
+          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        </div>
+      </div>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link" href="products.html">PRODUCTS</a>
+        <a class="mainnav-link" href="locator.html">LOCATOR</a>
+        <a class="mainnav-link" href="for-ms-annie.html">FOR MS ANNIE</a>
+        <a class="mainnav-link" href="contact.html">CONTACT</a>
+        <a class="mainnav-link member-pill" href="member.html"><span class="member-dot">●</span> MEMBER</a>
+      </nav>
+    </div>
+  </header>
+<section class="sustain-hero">
+  <div class="container pagehead sustain-hero-content">
+    <div class="sustain-hero-glass reveal">
+      <h1 class="h1">Sustainability @ GreenHealth</h1>
+      <p class="lead">
+        We integrate Environmental, Economic, and Social responsibility into everyday
+        healthcare to build a healthier community and planet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="ees caring-style">
+    <h2 class="ees-title">Sustainability @ GreenHealth</h2>
+    <p class="ees-subtitle">
+      Our sustainability efforts focus on Environmental, Economic, and Social impact.
+    </p>
+
+    <div class="ees-grid">
+
+      <!-- Environmental -->
+      <article class="ees-card">
+        <div class="ees-img">
+          <img src="images/ees-environment.jpg" alt="Environmental initiatives" />
+        </div>
+
+        <div class="ees-body">
+          <div class="ees-head">
+            <span class="ees-icon" aria-hidden="true">🌿</span>
+            <h3 class="ees-card-title">Greening Our Environment Together</h3>
+          </div>
+
+          <p class="ees-text">
+            We put our heart into the environment. That means getting smart with our supply chain,
+            saying ‘no’ to waste, and choosing packaging that loves our planet as much as we do.
+          </p>
+
+          <button class="ees-link" type="button" onclick="toggleCard(this)">
+            OUR ENVIRONMENTAL INITIATIVES
+          </button>
+
+          <div class="initiatives">
+            <ul>
+              <li>Sustainable procurement</li>
+              <li>Reusable Tote Bags</li>
+              <li>Refillable Sunscreen containers</li>
+              <li>Biodegradable Shopping Bags</li>
+              <li>Medication Disposal Program</li>
+              <li>E-Receipt Option</li>
+              <a class="spotlight-btn spotlight-btn-ghost" href="environmental.html">Learn More →</a>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Economic -->
+      <article class="ees-card">
+        <div class="ees-img">
+          <img src="images/ees-economic.jpg" alt="Economic initiatives" />
+        </div>
+
+        <div class="ees-body">
+          <div class="ees-head">
+            <span class="ees-icon" aria-hidden="true">💚</span>
+            <h3 class="ees-card-title">Boosting Economic Well-Being</h3>
+          </div>
+
+          <p class="ees-text">
+            <b>Our curated health supplements, fitness products, and wellness foods support preventive care,
+            while our Green Credit rewards make sustainable choices more affordable.
+          </p>
+
+          <button class="ees-link" type="button" onclick="toggleCard(this)">
+            OUR ECONOMIC INITIATIVES
+          </button>
+
+          <div class="initiatives">
+            <ul>
+              <li>Green Credit reward programme</li>
+              <li>Preventive health supplements</li>
+              <li>Exclusive sustainable collaborations</li>
+              <li>Click-and-collect convenience</li>
+              <a class="spotlight-btn spotlight-btn-ghost" href="economic.html">Learn More →</a>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Social -->
+      <article class="ees-card">
+        <div class="ees-img">
+          <img src="images/ees-social.jpg" alt="Social initiatives" />
+        </div>
+
+        <div class="ees-body">
+          <div class="ees-head">
+            <span class="ees-icon" aria-hidden="true">👥</span>
+            <h3 class="ees-card-title">Strengthening Social Connections</h3>
+          </div>
+
+          <p class="ees-text">
+            We engage young adults and families through education, consultations, and community partnerships
+            to build healthier, sustainability-minded lifestyles.
+          </p>
+
+          <button class="ees-link" type="button" onclick="toggleCard(this)">
+            OUR SOCIAL INITIATIVES
+          </button>
+
+          <div class="initiatives">
+            <ul>
+              <li>Pharmacist-led education</li>
+              <li>Youth estate community outreach</li>
+              <li>Sustainable lifestyle guidance</li>
+              <li>Digital engagement</li>
+              <a class="spotlight-btn spotlight-btn-ghost" href="social.html">Learn More →</a>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+
+<!-- ===== Partnership Spotlight: Eco-Roads ===== -->
+<section class="section spotlight-section">
+
+  <div class="spotlight--premium reveal spotlight-eco-wide">
+    <div class="spotlight-left">
+      <div class="spotlight-badge partner">
+        <span class="spotlight-badge-dot" aria-hidden="true"></span>
+        Sustainability Partner
+      </div>
+
+      <h2 class="spotlight-title">Eco-Roads Collaboration</h2>
+      <p class="spotlight-text">
+        We’re partnering with Magorium, an eco-road technology company to convert plastic waste into
+        road construction materials—helping reduce landfill and keep waste in a circular system.
+      </p>
+
+      <ul class="spotlight-points">
+        <li>Divert plastic waste from incineration/landfill</li>
+        <li>Support sustainable efforts</li>
+        <li>Scale impact through real-world infrastructure use</li>
+      </ul>
+
+      <div class="spotlight-cta">
+        <a class="spotlight-btn spotlight-btn-primary" href="https://www.mgrium.com/">Explore the Partnership</a>
+        <a class="spotlight-btn spotlight-btn-ghost" href="#impact-tracker">See Impact Tracker →</a>
+      </div>
+    </div>
+
+    <div class="spotlight-right">
+      <div class="partner-panel">
+        <div class="partner-panel-top">
+          <div class="partner-title"> Plastic waste → NEW Roads</div>
+          <div class="partner-sub">Based on Magorium's estimates:</div>
+        </div>
+
+       <div class="partner-stat">
+  <div class="partner-stat-big">95% of plastics</div>
+  <div class="partner-stat-label">unrecycled globally<br><span class="muted"></span></div>
+</div>
+<div class="partner-stat">
+  <div class="partner-stat-big">91% of plastics</div>
+  <div class="partner-stat-label">unrecycled locally<br><span class="muted"></span></div>
+</div>
+<div class="partner-stat">
+  <div class="partner-stat-big">NEWBitumen</div>
+  <div class="partner-stat-label">NEW recycled material to be made into roads<br><span class="muted"></span></div>
+</div>
+
+
+        <div class="partner-flow">
+          <div class="partner-chip">1) Collect packaging</div>
+          <div class="partner-chip">2) Consolidate &amp; process</div>
+          <div class="partner-chip">3) Convert to road material</div>
+          <div class="partner-chip">4) Track impact monthly</div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Exclusive Spotlights (Side by Side) ===== -->
+<section class="section spotlight-pair">
+  <div class="container">
+    <div class="spotlight-grid">
+
+    <!-- ===== Spotlight 1: Sunscreen ===== -->
+    <div class="spotlight--premium reveal">
+      <div class="spotlight-left">
+        <div class="spotlight-badge">
+          <span class="spotlight-badge-dot" aria-hidden="true"></span>
+          Exclusive Spotlight
+        </div>
+
+        <h2 class="spotlight-title">Eco Shield Sunscreen Broad Spectrum SPF 50</h2>
+
+        <p class="spotlight-text">
+          A skin-friendly sunscreen designed with sustainability in mind—available exclusively at GreenHealth.
+        </p>
+
+        <ul class="spotlight-points">
+          <li>Refill-ready packaging</li>
+          <li>Reef-conscious ingredients</li>
+          <li>Lower-waste distribution</li>
+        </ul>
+
+        <div class="spotlight-cta">
+          <a class="spotlight-btn spotlight-btn-primary" href="products.html">Shop Exclusive</a>
+          <a class="spotlight-btn spotlight-btn-ghost" href="sunscreens.html">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="spotlight-right">
+        <div class="spotlight-media">
+          <img class="spotlight-image" src="images/sunscreen-hero.png" alt="Eco Shield Sunscreen" />
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== Spotlight 2: Membership ===== -->
+    <div class="spotlight--premium reveal">
+      <div class="spotlight-left">
+        <div class="spotlight-badge">
+          <span class="spotlight-badge-dot" aria-hidden="true"></span>
+          Member Exclusive
+        </div>
+
+        <h2 class="spotlight-title">Green Credit Membership Perks</h2>
+
+        <p class="spotlight-text">
+          Earn rewards while building greener habits. Members enjoy points, vouchers,
+          and special bonuses throughout the year.
+        </p>
+
+        <ul class="spotlight-points">
+          <li>Earn points from purchases and green actions</li>
+          <li>Members-only vouchers and bundles</li>
+          <li>Birthday rewards and bonus promotions</li>
+        </ul>
+
+        <div class="spotlight-cta">
+          <a class="spotlight-btn spotlight-btn-primary" href="member.html">Join Membership</a>
+          <a class="spotlight-btn spotlight-btn-ghost" href="member.html">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="spotlight-right">
+        <div class="spotlight-media">
+          <img class="spotlight-image" src="images/greenhealth-logo.png" alt="Green Credit Membership" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</script>
+<!-- ONE dropdown script only -->
+<script>
+  function toggleCard(button) {
+    const card = button.closest(".ees-card");
+    if (!card) return;
+
+    const mine = card.querySelector(".initiatives");
+    if (!mine) return;
+
+    const isOpen = mine.classList.contains("open");
+
+    // close all
+    document.querySelectorAll(".initiatives").forEach(box => {
+      box.classList.remove("open");
+    });
+
+    // toggle this one
+    if (!isOpen) {
+      mine.classList.add("open");
+    }
+  }
+</script>
+
+
+<!-- Impact tracker -->
+
+<section class="sustainability-section" id="impact-tracker">
+    <h2 class="h2">Impact Tracker</h2>
+    <p class="impact-text">
+      We believe transparency builds trust. Every month, we share updates on our
+      sustainability progress.
+      <a class="spotlight-btn spotlight-btn-ghost" href="disposal.html">Learn More →</a>
+    </p>
+
+</section>
+
+
+     <footer class="footer">
+        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+      </footer>
+    </section>
+  </main>
