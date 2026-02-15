@@ -268,6 +268,93 @@
       </a>
     </div>
   </section>
+ <!-- MEMBER COUPONS SLIDER -->
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Partnership Brands</h2>
+      <p class="section-subtitle">Here are some of our trusted partners.</p>
+    </div>
+
+  <div class="coupon-slider" data-slider>
+    <button class="slider-btn" data-left aria-label="Scroll left">‹</button>
+
+    <div class="coupon-track" data-track>
+
+      <!-- La Roche-Posay -->
+      <article class="coupon-card">
+        <div class="coupon-visual">
+          <div class="coupon-logo">
+            <img src="images/larocheposay.jpg" alt="La Roche-Posay">
+          </div>
+          <div class="coupon-color"></div>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-meta"></div>
+          <div class="coupon-main"><strong>LA ROCHE-POSAY</strong> 
+        </div>
+      </article>
+
+      <!-- QV -->
+      <article class="coupon-card">
+        <div class="coupon-visual">
+          <div class="coupon-logo">
+            <img src="images/qv.jpg" alt="QV">
+          </div>
+          <div class="coupon-color"></div>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-meta">
+          <div class="coupon-main"><strong></strong> QV SKINCARE</div>
+        </div>
+      </article>
+
+      <!-- Cetaphil -->
+      <article class="coupon-card">
+        <div class="coupon-visual">
+          <div class="coupon-logo">
+            <img src="images/cetaphil.png" alt="Cetaphil">
+          </div>
+          <div class="coupon-color"></div>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-meta"</div>
+          <div class="coupon-main"><strong>CETAPHIL</strong> </div>
+        </div>
+      </article>
+
+      <!-- Similac -->
+      <article class="coupon-card">
+        <div class="coupon-visual">
+          <div class="coupon-logo">
+            <img src="images/similac.jpg" alt="Similac">
+          </div>
+          <div class="coupon-color"></div>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-meta">Available in  App</div>
+          <div class="coupon-main"><strong>ABOTT</strong> Similac</div>
+        </div>
+      </article>
+
+      <!-- Blackmores -->
+      <article class="coupon-card">
+        <div class="coupon-visual">
+          <div class="coupon-logo">
+            <img src="images/Blackmores.jpg" alt="Blackmores">
+          </div>
+          <div class="coupon-color"></div>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-meta">Available in  App</div>
+          <div class="coupon-main"><strong>BLACKMORES</strong> </div>
+        </div>
+      </article>
+
+    </div>
+
+    <button class="slider-btn" data-right aria-label="Scroll right">›</button>
+  </div>
+</section>
 
   <!-- Exclusive spotlight -->
   <section class="container section">
@@ -322,4 +409,22 @@
   <script src="main.js"></script>
 </body>
 </html>
+<script>
+  const slider = document.querySelector('[data-slider]');
+  const track = slider?.querySelector('[data-track]');
+  const leftBtn = slider?.querySelector('[data-left]');
+  const rightBtn = slider?.querySelector('[data-right]');
+
+  if (track && leftBtn && rightBtn) {
+    leftBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    rightBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
+</script>
+</body>
+
+
 
