@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Story • GreenHealth Pharmacy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ Added: CARiNG-style accordion CSS (you can move this into styles.css if you want) -->
+  <style>
+    /* ===== What Makes Us Unique (CARiNG-style accordion) ===== */
+    .wmuu {
+      margin-top: 26px;
+      margin-bottom: 34px;
+    }
+
+    .wmuu .section-title {
+      margin-bottom: 14px;
+    }
+
+    .wmuu-acc {
+      display: grid;
+      gap: 14px;
+    }
+
+    .wmuu-item {
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,.05);
+      overflow: hidden;
+    }
+
+    .wmuu-item > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 18px;
+      user-select: none;
+    }
+
+    /* Remove default marker */
+    .wmuu-item > summary::-webkit-details-marker { display: none; }
+    .wmuu-item > summary::marker { content: ""; }
+
+    .wmuu-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .wmuu-iconbox {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(46, 204, 113, 0.14); /* soft green */
+      border: 1px solid rgba(46, 204, 113, 0.22);
+      flex: 0 0 auto;
+    }
+
+    .wmuu-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .wmuu-title {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wmuu-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+    }
+
+    .wmuu-chip {
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 14px;
+      background: rgba(46, 204, 113, 0.12);
+      border: 1px solid rgba(46, 204, 113, 0.22);
+      color: #0b3b20;
+      white-space: nowrap;
+    }
+
+    .wmuu-chevron {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(0,0,0,.08);
+      background: #fff;
+      transition: transform .18s ease;
+      font-size: 16px;
+    }
+
+    /* Rotate chevron when open */
+    .wmuu-item[open] .wmuu-chevron {
+      transform: rotate(180deg);
+    }
+
+    .wmuu-body {
+      padding: 0 18px 18px 18px;
+      border-top: 1px solid rgba(0,0,0,.06);
+      background: linear-gradient(to bottom, rgba(0,0,0,.01), transparent);
+    }
+
+    .wmuu-body p {
+      margin: 12px 0 0 0;
+      line-height: 1.6;
+    }
+
+    .wmuu-pills {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .wmuu-pill {
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 14px;
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.08);
+      white-space: nowrap;
+    }
+
+    .wmuu-bestfor {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(0,0,0,.14);
+      font-weight: 650;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 560px) {
+      .wmuu-title { font-size: 18px; }
+      .wmuu-chip { display: none; } /* keep it clean on small screens */
+      .wmuu-iconbox { width: 48px; height: 48px; border-radius: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+ 
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+        </div>
+        <div>
+          <div class="brand-name">GreenHealth Pharmacy</div>
+          <div class="brand-tagline">Healthier living, zero-waste innovation</div>
+        </div>
+      </a>
+
+      <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+
+        <div class="nav-dropdown">
+          <a class="mainnav-link" href="about.html">
+            ABOUT <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about.html">About Us</a>
+            <a class="dropdown-link" href="vision.html">Vision and Mission</a>
+            <a class="dropdown-link" href="follow-us.html">Follow Us</a>
+            <a class="dropdown-link" href="joinourcommunity.html">Join Our Community</a>
+          </div>
+        </div>
+
+              <!-- ✅ SERVICES dropdown (click to open) -->
+      <div class="nav-dropdown" tabindex="0">
+        <a class="mainnav-link" href="#" aria-haspopup="true" aria-expanded="false">
+          SERVICES <span class="chev">▾</span>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <!-- ✅ Pharmacy Services goes to THIS page -->
+          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+          <!-- ✅ Specialised page -->
+          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        </div>
+      </div>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link" href="products.html">PRODUCTS</a>
+        <a class="mainnav-link" href="locator.html">LOCATOR</a>
+        <a class="mainnav-link" href="for-ms-annie.html">FOR MS ANNIE</a>
+        <a class="mainnav-link" href="contact.html">CONTACT</a>
+        <a class="mainnav-link member-pill" href="member.html"><span class="member-dot">●</span> MEMBER</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container story-page">
+
+    <!-- Intro (CENTERED LIKE CARiNG) -->
+    <section class="story-intro story-intro--center">
+      <h1 class="story-h1">Our Story</h1>
+      <p class="story-lead">
+        GreenHealth Pharmacy is a community pharmacy in Punggol built by pharmacists who believe
+        health support should be trusted, accessible, and sustainability-driven.
+      </p>
+    </section>
+
+    <!-- Milestones title -->
+    <h2 class="milestones-title">Our Milestones</h2>
+
+    <!-- ===== CARiNG-style timeline (arrow navigation) ===== -->
+    <section class="caring-timeline" aria-label="GreenHealth timeline">
+      <div class="timeline-shell">
+
+        <!-- Year rail + arrows -->
+        <aside class="year-rail" aria-label="Timeline navigation">
+          <button class="rail-arrow" type="button" data-dir="-1" aria-label="Previous year">↑</button>
+
+          <div class="rail-years">
+            <button class="year-btn is-active" type="button" data-year="2020" aria-selected="true">2020</button>
+            <button class="year-btn" type="button" data-year="2024" aria-selected="false">2024</button>
+            <button class="year-btn" type="button" data-year="2025" aria-selected="false">2025</button>
+            <button class="year-btn" type="button" data-year="2026" aria-selected="false">2026</button>
+          </div>
+
+          <button class="rail-arrow" type="button" data-dir="1" aria-label="Next year">↓</button>
+        </aside>
+
+        <!-- Panels -->
+        <div class="stage-view">
+
+          <!-- 2020 -->
+          <article id="panel-2020" class="story-panel is-active"
+            style="--bg:url('images/2000-team.jpg'); --bg-size:cover; --bg-pos:center;"
+            aria-label="Year 2020">
+
+            <div class="panel-overlay">
+              <h2 class="panel-title">The Beginning</h2>
+
+              <p class="panel-text">
+                GreenHealth Pharmacy was founded in 2020 by five NUS Pharmacy course-mates who came together
+                to support the Punggol community. At the time, awareness of sustainable pharmacy practices in
+                Singapore was still limited — so we decided to lead by example.
+              </p>
+
+              <div class="panel-grid">
+                <div class="panel-card">
+                  <h3>Primary Consumers</h3>
+                  <ul>We are looking for:
+                    <li> young consumers interested in sustainability &amp; healthy living</li>
+                    <li>Young working adults and families living in Punggol</li>
+                  </ul>
+                </div>
+
+                <div class="panel-card">
+                  <h3>Key steps we took</h3>
+                  <ol>
+                    <li>9am to 9pm, 12 hours a day, 7 days a week pharmacist-led support.</li>
+                    <li>Prescription dispensing, counselling, and daily health essentials.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2024 -->
+          <article id="panel-2024" class="story-panel"
+            style="--bg:url('images/2004-green-credit.png'); --bg-size:cover; --bg-pos:center;"
+            aria-label="Year 2024" hidden>
+
+            <div class="panel-overlay">
+              <h2 class="panel-title">The Green Credit</h2>
+
+              <p class="panel-text">
+                Launched in 2024, <strong>The Green Credit</strong> is our loyalty programme that rewards
+                everyday purchases and eco-friendly actions — helping customers save while supporting
+                a more sustainable future.
+              </p>
+
+              <div class="panel-card">
+                <h3>How it works</h3>
+                <p class="panel-text">
+                  Earn points through purchases and green actions. Redeem them for vouchers and rewards.
+                </p>
+
+                <div class="table-wrap" role="region" aria-label="Green Credit rewards">
+                  <table class="gh-table">
+                    <thead>
+                      <tr>
+                        <th>Action</th>
+                        <th>Reward</th>
+                        <th>Why it matters</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Spend at GreenHealth</strong></td>
+                        <td>$1 = 1 point</td>
+                        <td>Rewards loyal customers</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Return expired medication</strong></td>
+                        <td>+5 points</td>
+                        <td>Encourages safe disposal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Redeem points</strong></td>
+                        <td>200 points = $2 off</td>
+                        <td>Better value per visit</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Digital receipt</strong></td>
+                        <td>+1 point</td>
+                        <td>Reduces paper waste</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Reusable GreenHealth bag</strong></td>
+                        <td>Free bag +1 point</td>
+                        <td>Builds sustainable habits</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- 2025 -->
+          <article id="panel-2025" class="story-panel"
+            style="--bg:url('images/2005-telegram.png')" aria-label="Year 2025" hidden>
+
+            <div class="panel-overlay">
+              <h2 class="panel-title">Telegram Community</h2>
+
+              <p class="panel-text">
+                In 2025, we launched our Telegram community to share health tips, sustainability updates,
+                and member-only deals — with 2–4 trusted partner brands featured at a time.
+              </p>
+
+              <div class="panel-grid">
+
+                <div class="panel-card">
+                  <h3>Join our Telegram</h3>
+                  <p class="panel-text" style="margin-top:0;">
+                    Scan to get weekly deals, restock alerts, and quick health tips.
+                  </p>
+
+                  <div style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+                    <img
+                      src="images/QR.png"
+                      alt="GreenHealth Telegram QR code"
+                      style="width:170px; height:170px; object-fit:cover; border-radius:18px; background:#fff; padding:10px;"
+                    />
+
+                    <div style="max-width:320px;">
+                      <ul style="margin:0; padding-left:18px;">
+                        <li>Member-only promos &amp; bundles</li>
+                        <li>Freebies / samples (limited)</li>
+                        <li>Health tips + sustainability updates</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+         <div class="brand-logos">
+  <img src="images/qv.png" alt="QV" class="brand-logo-rect" />
+  <img src="images/cetaphil.png" alt="Cetaphil" class="brand-logo-rect" />
+  <img src="images/similac.png" alt="Similac" class="brand-logo-rect" />
+  <img src="images/blackmores.png" alt="Blackmores" class="brand-logo-rect" />
+  <img src="images/larocheposay.png" alt="La Roche-Posay" class="brand-logo-rect" />
+
+  <div class="brand-more">And Many More...</div>
+</div>
+
+
+              </div>
+            </div>
+          </article>
+
+          <!-- 2026 -->
+          <article id="panel-2026" class="story-panel"
+            style="--bg:url('images/2006-sunscreen.png')" aria-label="Year 2026" hidden>
+
+            <div class="panel-overlay">
+              <h2 class="panel-title">Refillable Mineral Sunscreen</h2>
+
+              <p class="panel-text">
+                In 2026, we developed a refill-first mineral sunscreen concept guided by dermatology-informed formulation principles —
+                designed for daily use, sensitive skin, and environmental responsibility.
+              </p>
+
+              <div class="bubble-grid">
+                <div class="bubble">
+                  <h4>Broad-spectrum protection</h4>
+                  <p>Non-nano zinc oxide + non-nano titanium dioxide for UVA/UVB coverage.</p>
+                </div>
+
+                <div class="bubble">
+                  <h4>Sensitive-skin friendly</h4>
+                  <p>Fragrance-free and designed to minimise irritation.</p>
+                </div>
+
+                <div class="bubble">
+                  <h4>Skin comfort support</h4>
+                  <p>Vitamin E and moisturising emollients for comfort.</p>
+                </div>
+
+                <div class="bubble">
+                  <h4>Refill-first sustainability</h4>
+                  <p>Refill model reduces packaging waste.</p>
+                </div>
+              </div>
+
+              <p class="legal-note" style="margin-top:12px;">
+                This product is <strong>not endorsed or manufactured</strong> by the National Skin Centre.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ REPLACED SECTION: What Makes Us Unique (CARiNG-style, collapsible) -->
+    <section class="wmuu" id="unique">
+      <h2 class="section-title">What Makes Us Unique</h2>
+
+      <div class="wmuu-acc" aria-label="What makes us unique accordion">
+
+        <!-- 1 -->
+        <details class="wmuu-item" open>
+          <summary aria-expanded="true">
+            <div class="wmuu-left">
+              <div class="wmuu-iconbox" aria-hidden="true"><span class="wmuu-icon">♻️</span></div>
+              <h3 class="wmuu-title">Sustainability-first</h3>
+            </div>
+            <div class="wmuu-right">
+              <span class="wmuu-chip">Lower waste</span>
+              <span class="wmuu-chevron" aria-hidden="true">▾</span>
+            </div>
+          </summary>
+
+          <div class="wmuu-body">
+            <p>
+              We make sustainable choices simple and rewarding — so it’s easier for the community to
+              build greener habits without sacrificing convenience.
+            </p>
+
+            <div class="wmuu-pills" aria-label="Sustainability highlights">
+              <span class="wmuu-pill">Reusable bag incentives</span>
+              <span class="wmuu-pill">Digital receipts</span>
+              <span class="wmuu-pill">Safe medication returns</span>
+              <span class="wmuu-pill">Refill + low-waste options</span>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2 -->
+        <details class="wmuu-item">
+          <summary aria-expanded="false">
+            <div class="wmuu-left">
+              <div class="wmuu-iconbox" aria-hidden="true"><span class="wmuu-icon">💳</span></div>
+              <h3 class="wmuu-title">The Green Credit</h3>
+            </div>
+            <div class="wmuu-right">
+              <span class="wmuu-chip">Earn rewards</span>
+              <span class="wmuu-chevron" aria-hidden="true">▾</span>
+            </div>
+          </summary>
+
+          <div class="wmuu-body">
+            <p>
+              Our loyalty programme rewards both purchases and eco-actions — so your everyday choices
+              turn into real savings and perks.
+            </p>
+
+            <div class="wmuu-pills" aria-label="Green Credit highlights">
+              <span class="wmuu-pill">$1 = 1 point</span>
+              <span class="wmuu-pill">+5 points for safe returns</span>
+              <span class="wmuu-pill">Redeem for vouchers</span>
+              <span class="wmuu-pill">Bonus eco-actions</span>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3 -->
+        <details class="wmuu-item">
+          <summary aria-expanded="false">
+            <div class="wmuu-left">
+              <div class="wmuu-iconbox" aria-hidden="true"><span class="wmuu-icon">📱</span></div>
+              <h3 class="wmuu-title">App-ready tracking</h3>
+            </div>
+            <div class="wmuu-right">
+              <span class="wmuu-chip">Convenient</span>
+              <span class="wmuu-chevron" aria-hidden="true">▾</span>
+            </div>
+          </summary>
+
+          <div class="wmuu-body">
+            <p>
+              Member benefits are designed to be easy to track — built for busy working adults and families
+              who prefer quick, clear updates.
+            </p>
+
+            <div class="wmuu-pills" aria-label="Tracking highlights">
+              <span class="wmuu-pill">Points balance</span>
+              <span class="wmuu-pill">Rewards catalogue</span>
+              <span class="wmuu-pill">Restock reminders</span>
+              <span class="wmuu-pill">Digital receipts</span>
+            </div>
+          </div>
+        </details>
+
+        <!-- 4 -->
+        <details class="wmuu-item">
+          <summary aria-expanded="false">
+            <div class="wmuu-left">
+              <div class="wmuu-iconbox" aria-hidden="true"><span class="wmuu-icon">💬</span></div>
+              <h3 class="wmuu-title">Telegram community</h3>
+            </div>
+            <div class="wmuu-right">
+              <span class="wmuu-chip">Member deals</span>
+              <span class="wmuu-chevron" aria-hidden="true">▾</span>
+            </div>
+          </summary>
+
+          <div class="wmuu-body">
+            <p>
+              A friendly community where we share health tips, sustainability updates, and exclusive promos.
+              We feature <strong>2–4 trusted partner brands</strong> at a time — so it stays useful, not noisy.
+            </p>
+
+            <div class="wmuu-pills" aria-label="Telegram highlights">
+              <span class="wmuu-pill">Weekly deals &amp; bundles</span>
+              <span class="wmuu-pill">Freebies (limited)</span>
+              <span class="wmuu-pill">Fast restock alerts</span>
+              <span class="wmuu-pill">Short health tips</span>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Our team -->
+    <section class="team caring-team" id="team">
+      <h2 class="section-title">Our Team</h2>
+      <p class="muted center">A community-driven team supporting Punggol with care you can trust.</p>
+
+      <div class="caring-team-wrap">
+        <div class="caring-team-grid">
+
+          <figure class="caring-member">
+            <div class="caring-photo">
+              <img src="images/nafyil.jpg" alt="Nafyil">
+            </div>
+            <figcaption class="caring-caption">
+              <div class="caring-name">Nafyil</div>
+              <div class="caring-role">Pharmacist</div>
+            </figcaption>
+          </figure>
+
+          <figure class="caring-member">
+            <div class="caring-photo">
+              <img src="images/kagan.jpg" alt="Kagan">
+            </div>
+            <figcaption class="caring-caption">
+              <div class="caring-name">Kagan</div>
+              <div class="caring-role">Pharmacist</div>
+            </figcaption>
+          </figure>
+
+          <figure class="caring-member">
+            <div class="caring-photo">
+              <img src="images/ben.jpg" alt="Ben">
+            </div>
+            <figcaption class="caring-caption">
+              <div class="caring-name">Ben</div>
+              <div class="caring-role">Pharmacist</div>
+            </figcaption>
+          </figure>
+
+          <figure class="caring-member">
+            <div class="caring-photo">
+              <img src="images/ming-en.jpg" alt="Ming En">
+            </div>
+            <figcaption class="caring-caption">
+              <div class="caring-name">Ming En</div>
+              <div class="caring-role">Pharmacist</div>
+            </figcaption>
+          </figure>
+
+          <figure class="caring-member">
+            <div class="caring-photo">
+              <img src="images/glenda.jpg" alt="Glenda">
+            </div>
+            <figcaption class="caring-caption">
+              <div class="caring-name">Glenda</div>
+              <div class="caring-role">Pharmacist</div>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+     <footer class="footer">
+        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+      </footer>
+    </section>
+  </main>
+
+  <script src="about-timeline.js"></script>
+  <script src="script.js"></script>
+
+  <!-- ✅ Added: Accordion behavior (only 1 open at a time) -->
+  <script>
+    (function () {
+      const items = Array.from(document.querySelectorAll(".wmuu-item"));
+
+      items.forEach((it) => {
+        it.addEventListener("toggle", () => {
+          if (!it.open) return;
+
+          // close other items
+          items.forEach((other) => {
+            if (other !== it) other.open = false;
+          });
+
+          // keep aria-expanded correct
+          items.forEach((d) => {
+            const sum = d.querySelector("summary");
+            if (sum) sum.setAttribute("aria-expanded", d.open ? "true" : "false");
+          });
+        });
+      });
+
+      // init aria on load
+      items.forEach((d) => {
+        const sum = d.querySelector("summary");
+        if (sum) sum.setAttribute("aria-expanded", d.open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>

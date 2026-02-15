@@ -1,0 +1,593 @@
+/* products.css (NO JS) */
+:root{
+  --bg:#f6f7f9;
+  --surface:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --line:#e5e7eb;
+  --brand:#0ea5e9;
+  --shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
+  --max: 1400px;
+  --pad: 20px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg)}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tiny{font-size:12px;line-height:1.5}
+.visually-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================
+   CSS-only cart counter
+========================= */
+.page{ counter-reset: cartCount; }
+
+#q-gh-sunscreen-1:checked ~ .cart-float,
+#q-gh-sunscreen-2:checked ~ .cart-float,
+#q-gh-sunscreen-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-gh-refill-kit-1:checked ~ .cart-float,
+#q-gh-refill-kit-2:checked ~ .cart-float,
+#q-gh-refill-kit-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-ginkgo-1:checked ~ .cart-float,
+#q-ginkgo-2:checked ~ .cart-float,
+#q-ginkgo-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-thomson-1:checked ~ .cart-float,
+#q-thomson-2:checked ~ .cart-float,
+#q-thomson-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-d3-1:checked ~ .cart-float,
+#q-d3-2:checked ~ .cart-float,
+#q-d3-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-swisse-cal-1:checked ~ .cart-float,
+#q-swisse-cal-2:checked ~ .cart-float,
+#q-swisse-cal-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-caltrate-1:checked ~ .cart-float,
+#q-caltrate-2:checked ~ .cart-float,
+#q-caltrate-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-enzymes-1:checked ~ .cart-float,
+#q-enzymes-2:checked ~ .cart-float,
+#q-enzymes-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-probiotic-1:checked ~ .cart-float,
+#q-probiotic-2:checked ~ .cart-float,
+#q-probiotic-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-lactogg-1:checked ~ .cart-float,
+#q-lactogg-2:checked ~ .cart-float,
+#q-lactogg-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-suubalm-1:checked ~ .cart-float,
+#q-suubalm-2:checked ~ .cart-float,
+#q-suubalm-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+#q-qv-1:checked ~ .cart-float,
+#q-qv-2:checked ~ .cart-float,
+#q-qv-3:checked ~ .cart-float{ counter-increment: cartCount; }
+
+.cart-count::after{
+  content: counter(cartCount);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:22px;
+  height:22px;
+  padding:0 7px;
+  margin-left:10px;
+  border-radius:999px;
+  background: var(--brand);
+  color:#fff;
+  font-size:12px;
+  font-weight:950;
+}
+
+/* =========================
+   HERO / TOP
+========================= */
+.hero{
+  padding:28px 0 16px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(14,165,233,0.18), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34,197,94,0.16), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.55), rgba(246,247,249,0));
+}
+
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  align-items:stretch;
+}
+
+.breadcrumb{display:flex;gap:8px;align-items:center;font-weight:900;font-size:12px;color:var(--muted)}
+.breadcrumb a{text-decoration:none;color:var(--muted)}
+.breadcrumb a:hover{color:var(--text)}
+.hero h1{margin:10px 0 10px;font-size:44px;letter-spacing:-1px;line-height:1.05}
+.hero-sub{max-width:64ch}
+.hero-controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 10px}
+.hero-search,.hero-sort{
+  height:46px;border-radius:16px;border:1px solid var(--line);
+  background:#fff;padding:0 12px;font-weight:800;outline:none;
+  box-shadow:0 2px 10px rgba(15,23,42,0.06);
+}
+.hero-search{flex:1;min-width:240px}
+.hero-sort{min-width:210px}
+.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px}
+.pill{
+  display:inline-flex;align-items:center;
+  padding:8px 10px;border-radius:999px;
+  border:1px solid rgba(148,163,184,0.45);
+  background:rgba(255,255,255,0.75);
+  font-weight:900;font-size:12px;
+}
+.hero-card{
+  border:1px solid rgba(148,163,184,0.45);
+  border-radius:24px;padding:16px;
+  box-shadow:var(--shadow);
+  background:linear-gradient(135deg, rgba(34,197,94,0.10), rgba(14,165,233,0.10));
+}
+.hero-card-title{font-weight:950;margin-bottom:8px}
+.hero-list{margin:0;padding-left:18px;line-height:1.6}
+.hero-mini{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hero-mini>div{
+  background:rgba(255,255,255,0.75);
+  border:1px solid rgba(148,163,184,0.35);
+  border-radius:16px;padding:10px;
+}
+.hero-mini-k{font-size:12px;font-weight:900;color:var(--muted)}
+.hero-mini-v{font-size:18px;font-weight:950}
+
+/* =========================
+   CATEGORY TILES
+========================= */
+.cat-strip{padding:8px 0 18px}
+.cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 12px}
+.cat-head h2{margin:0;font-size:18px}
+.cat-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:12px}
+.cat-tile{
+  position:relative;border-radius:20px;overflow:hidden;text-decoration:none;
+  border:1px solid rgba(148,163,184,0.35);
+  background:#fff;box-shadow:0 2px 14px rgba(15,23,42,0.06);
+  min-height:120px;
+}
+.cat-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.cat-overlay{
+  position:absolute;inset:0;
+  background: linear-gradient(180deg, rgba(15,23,42,0.0), rgba(15,23,42,0.55));
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:12px;
+}
+.cat-title{color:#fff;font-weight:950}
+.cat-sub{color:rgba(255,255,255,0.85);font-weight:800;font-size:12px;line-height:1.2}
+
+/* =========================
+   SHOP LAYOUT
+========================= */
+.shop-shell{
+  display:grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  padding: 8px 0 28px;
+  align-items:start;
+}
+
+/* Filters */
+.filters{
+  position: sticky;
+  top: 110px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 2px 14px rgba(15,23,42,0.06);
+  padding: 14px;
+}
+.filters-header{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-bottom: 10px;
+}
+.filters h2{margin:0;font-size:16px}
+.link-btn{
+  border:none;background:transparent;
+  font-weight:900;color:var(--brand);
+  text-decoration:none;
+}
+.link-btn:hover{text-decoration:underline}
+.label{
+  font-size:12px;color:var(--muted);font-weight:950;
+  text-transform:uppercase;letter-spacing:0.8px;margin-bottom: 8px;
+  display:block;
+}
+.search{display:block;margin:10px 0 4px}
+.search input{
+  width:100%;height:44px;border-radius:16px;border:1px solid var(--line);
+  padding:0 12px;font-weight:800;outline:none;background:#fff;
+}
+.filter-block{margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  border:1px solid var(--line);
+  background:#fbfdff;
+  border-radius:999px;
+  padding:8px 10px;
+  font-weight:900;
+  font-size:12px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+}
+.chip:hover{background:#eef2f7}
+.chip.is-active{background:#e0f2fe;border-color:#bae6fd;color:#075985}
+.note{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px}
+
+/* Results */
+.results-head{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex-wrap:wrap;margin:6px 0 12px;
+}
+.results-title{margin:0;font-size:18px}
+
+/* Sections */
+.section{scroll-margin-top: 120px; margin-bottom:22px}
+.section-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap}
+.section-head h3{margin:0;font-size:18px}
+.subhead{margin:14px 0 10px;font-size:14px;font-weight:950}
+
+/* Product grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:12px;
+  margin-top:10px;
+}
+.p-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:16px;
+  box-shadow:0 2px 14px rgba(15,23,42,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-height:auto;
+}
+.p-img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(148,163,184,0.35);
+  background:#f8fafc;
+}
+.p-chip{
+  display:inline-flex;
+  width:fit-content;
+  padding:8px 10px;
+  border-radius:10px;
+  background:#eef2f7;
+  color:var(--muted);
+  font-weight:950;
+  font-size:12px;
+}
+.p-title{
+  margin:0;
+  font-size:22px;
+  letter-spacing:-0.3px;
+  line-height:1.15;
+  font-weight:950;
+}
+.p-desc{
+  margin:0;
+  color:var(--muted);
+  font-weight:800;
+  line-height:1.5;
+  font-size:13px;
+}
+.p-meta-row{display:flex;gap:8px;flex-wrap:wrap}
+.meta-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(148,163,184,0.35);
+  background:#fff;
+  font-weight:950;
+  font-size:12px;
+  color:var(--text);
+}
+.p-price{font-size:22px;font-weight:950;color:var(--text)}
+.p-bottom{margin-top:auto;display:grid;gap:10px}
+
+/* VIEW CART button */
+.p-btn{
+  display:flex;justify-content:center;align-items:center;
+  height:48px;border-radius:14px;border:1px solid var(--line);
+  color:var(--text);font-weight:950;background:#fff;cursor:pointer;user-select:none;
+}
+.p-btn:hover{background:#f8fafc}
+
+/* =========================
+   GREENHEALTH EXCLUSIVES (FIXED LAYOUT)
+========================= */
+.section-feature{
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34,197,94,0.18), transparent 55%),
+    radial-gradient(circle at 85% 10%, rgba(14,165,233,0.16), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.55), rgba(246,247,249,0));
+  border:1px solid rgba(148,163,184,0.35);
+  border-radius:24px;
+  padding:18px;
+  box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+  margin-bottom:18px;
+
+  /* CHANGE: force "header then cards" stacking */
+  display:grid !important;
+  grid-template-columns: 1fr !important;
+  grid-auto-flow: row !important;
+
+  /* CHANGE: remove any centering */
+  width:100%;
+  max-width:none;
+  margin-left:0;
+  margin-right:0;
+}
+
+
+.feature-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:0;
+
+  /* FORCE: header spans full width */
+  grid-column:1 / -1;
+}
+
+.kicker{
+  display:inline-flex;width:fit-content;padding:8px 10px;border-radius:999px;
+  background:rgba(34,197,94,0.12);
+  border:1px solid rgba(34,197,94,0.25);
+  color:#0f5132;font-weight:950;font-size:12px;text-transform:uppercase;letter-spacing:0.9px;
+}
+.feature-title{
+  margin:10px 0 6px;font-size:26px;font-weight:950;letter-spacing:-0.4px;
+}
+.feature-sub{margin:0;max-width:68ch}
+.feature-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+
+/* IMPORTANT: your HTML uses class="grid grid-feature"
+   so target it like this to override .grid rules */
+.grid-feature{
+  display:grid !important;
+
+  /* CHANGE: 2 wider columns like your normal product rows */
+  grid-template-columns: repeat(2, minmax(360px, 1fr)) !important;
+
+  gap:18px;
+
+  /* CHANGE: left-align (no centering) */
+  justify-content:start !important;
+  justify-items:stretch !important;
+  align-items:stretch;
+
+  width:100%;
+  margin:14px 0 0 0 !important;
+}
+
+
+
+.p-card-feature{
+  border-radius:24px;
+  background:rgba(255,255,255,0.92);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.10);
+  border:1px solid rgba(148,163,184,0.35);
+
+  /* CHANGE: no forced narrow card sizing */
+  width:100%;
+  max-width:none;
+  margin:0;
+
+  /* optional: makes card layout consistent */
+  display:flex;
+  flex-direction:column;
+}
+
+.p-img-feature{
+  width:100%;
+  height:190px;      /* CHANGE: reduce tall/elongated look */
+  object-fit:cover;
+  border-radius:16px;
+}
+
+
+/* Pick badge (top-right) */
+.pick-wrap{position:relative}
+.pick-badge{
+  position:absolute;top:14px;right:14px;z-index:2;
+  padding:8px 10px;border-radius:999px;font-weight:950;font-size:12px;
+  color:#052e16;
+  background: linear-gradient(90deg, rgba(34,197,94,0.92), rgba(34,197,94,0.55));
+  border:1px solid rgba(34,197,94,0.35);
+  box-shadow: 0 10px 22px rgba(34,197,94,0.22);
+}
+
+/* =========================
+   CART DRAWER (unchanged)
+========================= */
+.drawer{position:fixed;inset:0;z-index:50;pointer-events:none}
+.drawer-backdrop{
+  position:absolute;inset:0;background:rgba(15,23,42,0.45);
+  opacity:0;transition:opacity 180ms ease;cursor:pointer;
+}
+.drawer-panel{
+  position:absolute;top:0;right:0;height:100%;
+  width:390px;max-width:92vw;background:#fff;
+  border-left:1px solid var(--line);
+  transform: translateX(105%);
+  transition:transform 200ms ease;
+  display:flex;flex-direction:column;box-shadow:var(--shadow);
+}
+.drawer-head{
+  padding:14px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:10px
+}
+.drawer-head h3{margin:0}
+.icon-btn{
+  border:1px solid var(--line);background:#fff;border-radius:12px;
+  padding:8px 10px;cursor:pointer;font-weight:950;
+}
+.drawer-body{padding:14px;overflow:auto;flex:1}
+
+#cartToggle:checked ~ .drawer{pointer-events:auto}
+#cartToggle:checked ~ .drawer .drawer-backdrop{opacity:1}
+#cartToggle:checked ~ .drawer .drawer-panel{transform:translateX(0)}
+
+/* Floating cart button */
+.cart-float{
+  position:fixed;left:18px;bottom:18px;z-index:60;
+  display:inline-flex;align-items:center;justify-content:center;
+  height:50px;padding:0 14px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;box-shadow: 0 10px 26px rgba(15,23,42,0.18);
+  font-weight:950;cursor:pointer;user-select:none;
+}
+.cart-float:hover{ background:#f8fafc; }
+#cartToggle:checked ~ .cart-float{ opacity:0; pointer-events:none; }
+
+/* footer (simple) */
+.footer{border-top:1px solid var(--line);background:#fff;margin-top:18px}
+.footer-inner{max-width:1200px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.footer-title{font-weight:950}
+.footer-links{display:flex;gap:12px;flex-wrap:wrap}
+.footer-links a{color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--text)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:12px 20px 18px;border-top:1px solid var(--line);font-size:13px}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2, 1fr)}
+  .feature-title{font-size:22px}
+
+  /* FEATURE cards stack on smaller screens */
+  .grid.grid-feature{
+    grid-template-columns:1fr !important;
+  }
+}
+@media (max-width: 980px){
+  .grid-feature{
+    grid-template-columns:1fr; /* stacks like a normal section */
+  }
+}
+@media (max-width: 720px){
+  .shop-shell{grid-template-columns:1fr}
+  .filters{position:static}
+}
+@media (max-width: 520px){
+  .grid{grid-template-columns:repeat(2, 1fr)}
+  .cart-float{ left:12px; bottom:12px; }
+  .cat-grid{grid-template-columns:1fr}
+}
+.section-feature > .feature-head{
+  grid-column: 1 / -1 !important;
+}
+
+.section-feature > .grid-feature{
+  grid-column: 1 / -1 !important;
+}
+/* =========================
+   FIX: Supplements header layout (match sunscreen behavior)
+   Paste at END of products.css
+========================= */
+
+/* 1) Force any section header row to be flex, not grid */
+.section .section-head{
+  display:flex !important;          /* CHANGE: (grid/other) -> flex */
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:12px !important;
+  flex-wrap:wrap !important;
+  width:100% !important;
+}
+
+/* 2) Make the title stay left and take the line */
+.section .section-head h3{
+  margin:0 !important;
+  flex:1 1 auto !important;         /* CHANGE: (auto) -> flex grow */
+  min-width:180px;
+}
+
+/* 3) "Pick by goal." must sit on the right (not centered column) */
+.section .section-head > :not(h3){
+  margin-left:auto !important;      /* CHANGE: (centered/grid) -> right side */
+  text-align:right !important;
+}
+
+/* 4) Subheads like Brain / Bone & joint must be full-width and LEFT */
+.section .subhead{
+  width:100% !important;            /* CHANGE: (auto) -> full width */
+  text-align:left !important;       /* CHANGE: (center/right) -> left */
+  margin:14px 0 10px !important;
+  grid-column:1 / -1 !important;    /* CHANGE: (placed in col 3) -> span all */
+  justify-self:start !important;
+}
+
+/* 5) If your section container accidentally became grid, neutralize */
+.section{
+  display:block !important;         /* CHANGE: (grid) -> block */
+}
+/* =========================
+   FIX: Restore Add to cart for Sunscreen (and Refill) at qty 0
+   Paste at END of products.css
+========================= */
+
+/* SUNSCREEN: default state = show Add button, hide stepper */
+.main .cart-actions.q-gh-sunscreen .add-btn{ display:flex !important; }   /* CHANGE: none -> flex */
+.main .cart-actions.q-gh-sunscreen .qty-ui{ display:none !important; }   /* CHANGE: (maybe grid) -> none */
+
+/* SUNSCREEN: when qty is 1-3, hide Add button and show stepper */
+#q-gh-sunscreen-1:checked ~ .main .cart-actions.q-gh-sunscreen .add-btn,
+#q-gh-sunscreen-2:checked ~ .main .cart-actions.q-gh-sunscreen .add-btn,
+#q-gh-sunscreen-3:checked ~ .main .cart-actions.q-gh-sunscreen .add-btn{ display:none !important; } /* CHANGE: flex -> none */
+
+#q-gh-sunscreen-1:checked ~ .main .cart-actions.q-gh-sunscreen .qty-ui,
+#q-gh-sunscreen-2:checked ~ .main .cart-actions.q-gh-sunscreen .qty-ui,
+#q-gh-sunscreen-3:checked ~ .main .cart-actions.q-gh-sunscreen .qty-ui{ display:grid !important; } /* CHANGE: none -> grid */
+
+
+/* REFILL: same safety fix (optional but recommended) */
+.main .cart-actions.q-gh-refill .add-btn{ display:flex !important; }      /* CHANGE: none -> flex */
+.main .cart-actions.q-gh-refill .qty-ui{ display:none !important; }      /* CHANGE: (maybe grid) -> none */
+
+#q-gh-refill-kit-1:checked ~ .main .cart-actions.q-gh-refill .add-btn,
+#q-gh-refill-kit-2:checked ~ .main .cart-actions.q-gh-refill .add-btn,
+#q-gh-refill-kit-3:checked ~ .main .cart-actions.q-gh-refill .add-btn{ display:none !important; } /* CHANGE: flex -> none */
+
+#q-gh-refill-kit-1:checked ~ .main .cart-actions.q-gh-refill .qty-ui,
+#q-gh-refill-kit-2:checked ~ .main .cart-actions.q-gh-refill .qty-ui,
+#q-gh-refill-kit-3:checked ~ .main .cart-actions.q-gh-refill .qty-ui{ display:grid !important; } /* CHANGE: none -> grid */

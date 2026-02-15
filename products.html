@@ -1,0 +1,1106 @@
+<!-- products.html (NO JS) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products | GreenHealth Pharmacy</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="products.css" />
+</head>
+
+<body id="top">
+  <div class="page">
+
+    <!-- =========================================================
+      CSS-ONLY STATE (NO JS)
+      - Cart drawer toggle
+      - Qty radios per product (0-3)
+    ========================================================== -->
+    <input class="visually-hidden" type="checkbox" id="cartToggle" />
+
+    <!-- =========================
+      QTY STATE (0-3 each product)
+    ========================== -->
+
+    <!-- Exclusives -->
+    <input class="visually-hidden" type="radio" name="q-gh-sunscreen" id="q-gh-sunscreen-0" checked>
+    <input class="visually-hidden" type="radio" name="q-gh-sunscreen" id="q-gh-sunscreen-1">
+    <input class="visually-hidden" type="radio" name="q-gh-sunscreen" id="q-gh-sunscreen-2">
+    <input class="visually-hidden" type="radio" name="q-gh-sunscreen" id="q-gh-sunscreen-3">
+
+    <input class="visually-hidden" type="radio" name="q-gh-refill-kit" id="q-gh-refill-kit-0" checked>
+    <input class="visually-hidden" type="radio" name="q-gh-refill-kit" id="q-gh-refill-kit-1">
+    <input class="visually-hidden" type="radio" name="q-gh-refill-kit" id="q-gh-refill-kit-2">
+    <input class="visually-hidden" type="radio" name="q-gh-refill-kit" id="q-gh-refill-kit-3">
+
+    <!-- Supplements -->
+    <input class="visually-hidden" type="radio" name="q-ginkgo" id="q-ginkgo-0" checked>
+    <input class="visually-hidden" type="radio" name="q-ginkgo" id="q-ginkgo-1">
+    <input class="visually-hidden" type="radio" name="q-ginkgo" id="q-ginkgo-2">
+    <input class="visually-hidden" type="radio" name="q-ginkgo" id="q-ginkgo-3">
+
+    <input class="visually-hidden" type="radio" name="q-thomson" id="q-thomson-0" checked>
+    <input class="visually-hidden" type="radio" name="q-thomson" id="q-thomson-1">
+    <input class="visually-hidden" type="radio" name="q-thomson" id="q-thomson-2">
+    <input class="visually-hidden" type="radio" name="q-thomson" id="q-thomson-3">
+
+    <input class="visually-hidden" type="radio" name="q-d3" id="q-d3-0" checked>
+    <input class="visually-hidden" type="radio" name="q-d3" id="q-d3-1">
+    <input class="visually-hidden" type="radio" name="q-d3" id="q-d3-2">
+    <input class="visually-hidden" type="radio" name="q-d3" id="q-d3-3">
+
+    <input class="visually-hidden" type="radio" name="q-swisse-cal" id="q-swisse-cal-0" checked>
+    <input class="visually-hidden" type="radio" name="q-swisse-cal" id="q-swisse-cal-1">
+    <input class="visually-hidden" type="radio" name="q-swisse-cal" id="q-swisse-cal-2">
+    <input class="visually-hidden" type="radio" name="q-swisse-cal" id="q-swisse-cal-3">
+
+    <input class="visually-hidden" type="radio" name="q-caltrate" id="q-caltrate-0" checked>
+    <input class="visually-hidden" type="radio" name="q-caltrate" id="q-caltrate-1">
+    <input class="visually-hidden" type="radio" name="q-caltrate" id="q-caltrate-2">
+    <input class="visually-hidden" type="radio" name="q-caltrate" id="q-caltrate-3">
+
+    <input class="visually-hidden" type="radio" name="q-enzymes" id="q-enzymes-0" checked>
+    <input class="visually-hidden" type="radio" name="q-enzymes" id="q-enzymes-1">
+    <input class="visually-hidden" type="radio" name="q-enzymes" id="q-enzymes-2">
+    <input class="visually-hidden" type="radio" name="q-enzymes" id="q-enzymes-3">
+
+    <input class="visually-hidden" type="radio" name="q-probiotic" id="q-probiotic-0" checked>
+    <input class="visually-hidden" type="radio" name="q-probiotic" id="q-probiotic-1">
+    <input class="visually-hidden" type="radio" name="q-probiotic" id="q-probiotic-2">
+    <input class="visually-hidden" type="radio" name="q-probiotic" id="q-probiotic-3">
+
+    <input class="visually-hidden" type="radio" name="q-lactogg" id="q-lactogg-0" checked>
+    <input class="visually-hidden" type="radio" name="q-lactogg" id="q-lactogg-1">
+    <input class="visually-hidden" type="radio" name="q-lactogg" id="q-lactogg-2">
+    <input class="visually-hidden" type="radio" name="q-lactogg" id="q-lactogg-3">
+
+    <!-- Skin care -->
+    <input class="visually-hidden" type="radio" name="q-suubalm" id="q-suubalm-0" checked>
+    <input class="visually-hidden" type="radio" name="q-suubalm" id="q-suubalm-1">
+    <input class="visually-hidden" type="radio" name="q-suubalm" id="q-suubalm-2">
+    <input class="visually-hidden" type="radio" name="q-suubalm" id="q-suubalm-3">
+
+    <!-- Mom & cutie -->
+    <input class="visually-hidden" type="radio" name="q-qv" id="q-qv-0" checked>
+    <input class="visually-hidden" type="radio" name="q-qv" id="q-qv-1">
+    <input class="visually-hidden" type="radio" name="q-qv" id="q-qv-2">
+    <input class="visually-hidden" type="radio" name="q-qv" id="q-qv-3">
+
+    <!-- Fitness (NEW) -->
+    <input class="visually-hidden" type="radio" name="q-whey" id="q-whey-0" checked>
+    <input class="visually-hidden" type="radio" name="q-whey" id="q-whey-1">
+    <input class="visually-hidden" type="radio" name="q-whey" id="q-whey-2">
+    <input class="visually-hidden" type="radio" name="q-whey" id="q-whey-3">
+
+    <input class="visually-hidden" type="radio" name="q-creatine" id="q-creatine-0" checked>
+    <input class="visually-hidden" type="radio" name="q-creatine" id="q-creatine-1">
+    <input class="visually-hidden" type="radio" name="q-creatine" id="q-creatine-2">
+    <input class="visually-hidden" type="radio" name="q-creatine" id="q-creatine-3">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+        </div>
+        <div>
+          <div class="brand-name">GreenHealth Pharmacy</div>
+          <div class="brand-tagline">Healthier living, zero-waste innovation</div>
+        </div>
+      </a>
+
+      <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+
+        <div class="nav-dropdown">
+          <a class="mainnav-link" href="about.html">
+            ABOUT <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about.html">About Us</a>
+            <a class="dropdown-link" href="vision.html">Vision and Mission</a>
+            <a class="dropdown-link" href="follow-us.html">Follow Us</a>
+            <a class="dropdown-link" href="joinourcommunity.html">Join Our Community</a>
+          </div>
+        </div>
+
+              <!-- ✅ SERVICES dropdown (click to open) -->
+      <div class="nav-dropdown" tabindex="0">
+        <a class="mainnav-link" href="#" aria-haspopup="true" aria-expanded="false">
+          SERVICES <span class="chev">▾</span>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <!-- ✅ Pharmacy Services goes to THIS page -->
+          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+          <!-- ✅ Specialised page -->
+          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        </div>
+      </div>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link" href="products.html">PRODUCTS</a>
+        <a class="mainnav-link" href="locator.html">LOCATOR</a>
+        <a class="mainnav-link " href="for-ms-annie.html">FOR MS ANNIE</a>
+        <a class="mainnav-link" href="contact.html">CONTACT</a>
+        <a class="mainnav-link member-pill" href="member.html"><span class="member-dot">●</span> MEMBER</a>
+      </nav>
+    </div>
+  </header>
+
+
+    <!-- =========================
+      TOP / HERO
+    ========================== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <span>Products</span>
+          </div>
+
+          <h1>Shop essentials, the greener way.</h1>
+          <p class="muted hero-sub">
+            Browse supplements, skincare, family care, and fitness essentials in a clean catalog style.
+            Look for refills, value packs, and bring-back packaging options.
+          </p>
+
+          <div class="hero-controls">
+            <input class="hero-search" type="search" placeholder="(UI only) Search products…" aria-label="Search products (UI only)">
+            <select class="hero-sort" aria-label="Sort products (UI only)">
+              <option>Sort: Featured</option>
+              <option>Name: A → Z</option>
+              <option>Category</option>
+            </select>
+          </div>
+
+          <div class="hero-badges">
+            <span class="pill">♻️ Refill-friendly</span>
+            <span class="pill">📦 Value packs</span>
+            <span class="pill">🌿 Low-waste picks</span>
+          </div>
+
+          <p class="tiny muted"></p>
+        </div>
+
+        <aside class="hero-right" aria-label="Highlights">
+          <div class="hero-mini"></div>
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- =========================
+      CATEGORY TILES
+    ========================== -->
+    <section class="cat-strip">
+      <div class="container">
+        <div class="cat-head">
+          <h2>Categories</h2>
+          <div class="muted">Tap to jump.</div>
+        </div>
+
+        <div class="cat-grid">
+          <a class="cat-tile" href="#exclusives">
+            <img src="images/Exclusive-background.png" alt="GreenHealth exclusives">
+            <div class="cat-overlay">
+              <div class="cat-title">Exclusives</div>
+              <div class="cat-sub">GreenHealth in-house picks</div>
+            </div>
+          </a>
+
+          <a class="cat-tile" href="#supplements">
+            <img src="images/supplement-background.png" alt="Supplements">
+            <div class="cat-overlay">
+              <div class="cat-title">Supplements</div>
+              <div class="cat-sub">Brain • Bone • Gut</div>
+            </div>
+          </a>
+
+          <a class="cat-tile" href="#skin-care">
+            <img src="images/skincare-background.png" alt="Skincare">
+            <div class="cat-overlay">
+              <div class="cat-title">Skin care</div>
+              <div class="cat-sub">Refills • Sensitive skin</div>
+            </div>
+          </a>
+
+          <a class="cat-tile" href="#mom-cutie">
+            <img src="images/momandcutie-background.png" alt="Mom and cutie">
+            <div class="cat-overlay">
+              <div class="cat-title">Mom &amp; cutie</div>
+              <div class="cat-sub">Baby essentials</div>
+            </div>
+          </a>
+
+          <a class="cat-tile" href="#fitness">
+            <img src="images/fitness-background.png" alt="Fitness">
+            <div class="cat-overlay">
+              <div class="cat-title">Fitness</div>
+              <div class="cat-sub">Supplements • Recovery</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+      SHOP
+    ========================== -->
+    <main class="main" id="shop">
+      <div class="container shop-shell">
+
+        <!-- Left filters -->
+        <aside class="filters" aria-label="Filters">
+          <div class="filters-header">
+            <h2>Filters</h2>
+            <a class="link-btn" href="#top">Reset</a>
+          </div>
+
+          <label class="search">
+            <span class="label">Search</span>
+            <input type="search" placeholder="Search products…" autocomplete="off" />
+          </label>
+
+          <div class="filter-block">
+            <div class="label">Category</div>
+            <div class="chips">
+              <a class="chip is-active" href="#top">All</a>
+              <a class="chip" href="#exclusives">Exclusives</a>
+              <a class="chip" href="#supplements">Supplements</a>
+              <a class="chip" href="#skin-care">Skin care</a>
+              <a class="chip" href="#Fitness">Fitness</a>
+              <a class="chip" href="#mom-cutie">Mom &amp; cutie</a>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <div class="label">Concern / Goal</div>
+            <div class="chips">
+              <a class="chip" href="#brain">Brain</a>
+              <a class="chip" href="#bone">Bone &amp; joint</a>
+              <a class="chip" href="#digestive">Digestive</a>
+              <a class="chip" href="#baby">Baby</a>
+            </div>
+          </div>
+
+          <div class="filter-block note">
+            <div class="label">Sustainability note</div>
+            <p class="muted">
+              “Refill” means you replace only the inner pouch / pack, not the whole bottle (less plastic).
+            </p>
+          </div>
+
+          <div class="filter-block note">
+            <div class="label">Collect in store</div>
+            <p class="muted">
+              Add items to reserve online, then collect at the counter.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right products -->
+        <section class="results" aria-label="Products">
+          <div class="results-head">
+            <div>
+              <h2 class="results-title">Products</h2>
+              <div class="muted small">Cards • SGD (S$)</div>
+            </div>
+          </div>
+
+          <!-- =========================
+            EXCLUSIVES
+          ========================== -->
+          <section id="exclusives" class="section section-feature">
+            <div class="feature-head">
+              <div>
+                <div class="kicker">GreenHealth exclusive</div>
+                <h2 class="feature-title">Made for low-waste routines.</h2>
+                <p class="muted feature-sub">
+                  In-house picks that focus on refills, gentle formulas, and packaging that reduces waste.
+                </p>
+              </div>
+
+              <div class="feature-tags">
+                <span class="pill">♻️ Refill-first</span>
+                <span class="pill">🌿 Low-waste</span>
+                <span class="pill">🧪 Gentle</span>
+              </div>
+            </div>
+
+            <div class="grid grid-feature">
+              <!-- Sunscreen -->
+              <article class="p-card p-card-feature">
+                <img class="p-img p-img-feature" src="images/PRODUCT-PIC.png" alt="GreenHealth Mineral Sunscreen SPF50+">
+                <div class="p-chip">GreenHealth Exclusive</div>
+                <h3 class="p-title">GreenHealth Mineral Sunscreen SPF50+</h3>
+                <p class="p-desc">
+                  Lightweight daily protection with refill-ready packaging—designed to cut plastic without sacrificing comfort.
+                </p>
+
+                <div class="p-meta-row">
+                  <span class="meta-badge">Refill-ready</span>
+                  <span class="meta-badge">Sensitive skin</span>
+                </div>
+
+                <div class="p-bottom">
+                  <div class="p-price">S$15.90</div>
+
+                  <div class="cart-actions q-gh-sunscreen">
+                    <label class="add-btn" for="q-gh-sunscreen-1">Add to cart</label>
+
+                    <div class="qty-ui q-gh-sunscreen" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-gh-sunscreen-0">−</label>
+                      <label class="qbtn minus m1" for="q-gh-sunscreen-0">−</label>
+                      <label class="qbtn minus m2" for="q-gh-sunscreen-1">−</label>
+                      <label class="qbtn minus m3" for="q-gh-sunscreen-2">−</label>
+
+                      <span class="qnum n0">0</span>
+                      <span class="qnum n1">1</span>
+                      <span class="qnum n2">2</span>
+                      <span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-gh-sunscreen-1">+</label>
+                      <label class="qbtn plus p1" for="q-gh-sunscreen-2">+</label>
+                      <label class="qbtn plus p2" for="q-gh-sunscreen-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Refill kit -->
+              <article class="p-card p-card-feature pick-wrap">
+                <span class="pick-badge">GreenHealth’s Pick</span>
+
+                <img class="p-img p-img-feature" src="images/Greenhealth-sunscreen-refill.png" alt="GreenHealth Refill Starter Pack">
+                <div class="p-chip">GreenHealth Exclusive</div>
+                <h3 class="p-title">GreenHealth Refill Starter Pack</h3>
+                <p class="p-desc">
+                  One durable outer bottle + replacement inner refill packs. Less plastic per top-up and less clutter.
+                </p>
+
+                <div class="p-meta-row">
+                  <span class="meta-badge">Best value</span>
+                  <span class="meta-badge">Low-waste</span>
+                </div>
+
+                <div class="p-bottom">
+                  <div class="p-price">S$11.90</div>
+
+                  <div class="cart-actions q-gh-refill">
+                    <label class="add-btn" for="q-gh-refill-kit-1">Add to cart</label>
+
+                    <div class="qty-ui q-gh-refill" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-gh-refill-kit-0">−</label>
+                      <label class="qbtn minus m1" for="q-gh-refill-kit-0">−</label>
+                      <label class="qbtn minus m2" for="q-gh-refill-kit-1">−</label>
+                      <label class="qbtn minus m3" for="q-gh-refill-kit-2">−</label>
+
+                      <span class="qnum n0">0</span>
+                      <span class="qnum n1">1</span>
+                      <span class="qnum n2">2</span>
+                      <span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-gh-refill-kit-1">+</label>
+                      <label class="qbtn plus p1" for="q-gh-refill-kit-2">+</label>
+                      <label class="qbtn plus p2" for="q-gh-refill-kit-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+
+          <!-- =========================
+            SUPPLEMENTS
+          ========================== -->
+          <section id="supplements" class="section">
+            <div class="section-head">
+              <h3>Supplements</h3>
+              <p class="muted">Pick by goal.</p>
+            </div>
+
+            <h4 id="brain" class="subhead">Brain</h4>
+            <div class="grid">
+              <!-- Ginkgo 2000 -->
+              <article class="p-card">
+                <img class="p-img" src="images/Ginkgo-2000.png" alt="VitaHealth Ginkgo 2000mg">
+                <div class="p-chip">Brain &amp; Circulation</div>
+                <h3 class="p-title">VitaHealth Ginkgo 2000mg</h3>
+                <div class="p-price">S$32.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-ginkgo">
+                    <label class="add-btn" for="q-ginkgo-1">Add to cart</label>
+
+                    <div class="qty-ui q-ginkgo" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-ginkgo-0">−</label>
+                      <label class="qbtn minus m1" for="q-ginkgo-0">−</label>
+                      <label class="qbtn minus m2" for="q-ginkgo-1">−</label>
+                      <label class="qbtn minus m3" for="q-ginkgo-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-ginkgo-1">+</label>
+                      <label class="qbtn plus p1" for="q-ginkgo-2">+</label>
+                      <label class="qbtn plus p2" for="q-ginkgo-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Thomson Ginkgo -->
+              <article class="p-card">
+                <img class="p-img" src="images/thomson-ginko.png" alt="Thomson Ginkgo 40mg">
+                <div class="p-chip">Brain &amp; Circulation</div>
+                <h3 class="p-title">Thomson Ginkgo 40mg</h3>
+                <div class="p-price">S$26.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-thomson">
+                    <label class="add-btn" for="q-thomson-1">Add to cart</label>
+
+                    <div class="qty-ui q-thomson" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-thomson-0">−</label>
+                      <label class="qbtn minus m1" for="q-thomson-0">−</label>
+                      <label class="qbtn minus m2" for="q-thomson-1">−</label>
+                      <label class="qbtn minus m3" for="q-thomson-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-thomson-1">+</label>
+                      <label class="qbtn plus p1" for="q-thomson-2">+</label>
+                      <label class="qbtn plus p2" for="q-thomson-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+
+            <h4 id="bone" class="subhead">Bone and joint health</h4>
+            <div class="grid">
+              <!-- D3 -->
+              <article class="p-card">
+                <img class="p-img" src="images/Blackmores-Vitamin-D3.png" alt="Blackmores Vitamin D3 1000IU">
+                <div class="p-chip">Bone &amp; Joint</div>
+                <h3 class="p-title">Blackmores Vitamin D3 1000IU</h3>
+                <div class="p-price">S$25.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-d3">
+                    <label class="add-btn" for="q-d3-1">Add to cart</label>
+
+                    <div class="qty-ui q-d3" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-d3-0">−</label>
+                      <label class="qbtn minus m1" for="q-d3-0">−</label>
+                      <label class="qbtn minus m2" for="q-d3-1">−</label>
+                      <label class="qbtn minus m3" for="q-d3-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-d3-1">+</label>
+                      <label class="qbtn plus p1" for="q-d3-2">+</label>
+                      <label class="qbtn plus p2" for="q-d3-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Swisse Cal -->
+              <article class="p-card">
+                <img class="p-img" src="images/swisse-calcium.png" alt="Swisse Calcium + Vitamin D">
+                <div class="p-chip">Bone &amp; Joint</div>
+                <h3 class="p-title">Swisse Calcium + Vitamin D</h3>
+                <div class="p-price">S$39.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-swissecal">
+                    <label class="add-btn" for="q-swisse-cal-1">Add to cart</label>
+
+                    <div class="qty-ui q-swissecal" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-swisse-cal-0">−</label>
+                      <label class="qbtn minus m1" for="q-swisse-cal-0">−</label>
+                      <label class="qbtn minus m2" for="q-swisse-cal-1">−</label>
+                      <label class="qbtn minus m3" for="q-swisse-cal-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-swisse-cal-1">+</label>
+                      <label class="qbtn plus p1" for="q-swisse-cal-2">+</label>
+                      <label class="qbtn plus p2" for="q-swisse-cal-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Caltrate -->
+              <article class="p-card">
+                <img class="p-img" src="images/caltrate.png" alt="Caltrate 600 + D">
+                <div class="p-chip">Bone &amp; Joint</div>
+                <h3 class="p-title">Caltrate 600 + D</h3>
+                <div class="p-price">S$42.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-caltrate">
+                    <label class="add-btn" for="q-caltrate-1">Add to cart</label>
+
+                    <div class="qty-ui q-caltrate" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-caltrate-0">−</label>
+                      <label class="qbtn minus m1" for="q-caltrate-0">−</label>
+                      <label class="qbtn minus m2" for="q-caltrate-1">−</label>
+                      <label class="qbtn minus m3" for="q-caltrate-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-caltrate-1">+</label>
+                      <label class="qbtn plus p1" for="q-caltrate-2">+</label>
+                      <label class="qbtn plus p2" for="q-caltrate-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+
+            <h4 id="digestive" class="subhead">Digestive and Detox</h4>
+            <div class="grid">
+              <!-- Enzymes -->
+              <article class="p-card">
+                <img class="p-img" src="images/holistic-way-digestive-enzymes.png" alt="Holistic Way Digestive Enzymes">
+                <div class="p-chip">Digestive</div>
+                <h3 class="p-title">Holistic Way Digestive Enzymes</h3>
+                <div class="p-price">S$34.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-enzymes">
+                    <label class="add-btn" for="q-enzymes-1">Add to cart</label>
+
+                    <div class="qty-ui q-enzymes" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-enzymes-0">−</label>
+                      <label class="qbtn minus m1" for="q-enzymes-0">−</label>
+                      <label class="qbtn minus m2" for="q-enzymes-1">−</label>
+                      <label class="qbtn minus m3" for="q-enzymes-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-enzymes-1">+</label>
+                      <label class="qbtn plus p1" for="q-enzymes-2">+</label>
+                      <label class="qbtn plus p2" for="q-enzymes-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Pre+Probiotic -->
+              <article class="p-card">
+                <img class="p-img" src="images/vitahealth-pre+probiotic.png" alt="VitaHealth Pre + Pro Biotics">
+                <div class="p-chip">Digestive</div>
+                <h3 class="p-title">VitaHealth Pre + Pro Biotics</h3>
+                <div class="p-price">S$36.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-probiotic">
+                    <label class="add-btn" for="q-probiotic-1">Add to cart</label>
+
+                    <div class="qty-ui q-probiotic" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-probiotic-0">−</label>
+                      <label class="qbtn minus m1" for="q-probiotic-0">−</label>
+                      <label class="qbtn minus m2" for="q-probiotic-1">−</label>
+                      <label class="qbtn minus m3" for="q-probiotic-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-probiotic-1">+</label>
+                      <label class="qbtn plus p1" for="q-probiotic-2">+</label>
+                      <label class="qbtn plus p2" for="q-probiotic-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- LACTO GG -->
+              <article class="p-card">
+                <img class="p-img" src="images/lacto-gg.png" alt="LACTO GG Capsules (30s)">
+                <div class="p-chip">Digestive</div>
+                <h3 class="p-title">LACTO GG Capsules (30s)</h3>
+                <div class="p-price">S$29.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-lactogg">
+                    <label class="add-btn" for="q-lactogg-1">Add to cart</label>
+
+                    <div class="qty-ui q-lactogg" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-lactogg-0">−</label>
+                      <label class="qbtn minus m1" for="q-lactogg-0">−</label>
+                      <label class="qbtn minus m2" for="q-lactogg-1">−</label>
+                      <label class="qbtn minus m3" for="q-lactogg-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-lactogg-1">+</label>
+                      <label class="qbtn plus p1" for="q-lactogg-2">+</label>
+                      <label class="qbtn plus p2" for="q-lactogg-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+
+          <!-- =========================
+            SKIN CARE
+          ========================== -->
+          <section id="skin-care" class="section">
+            <div class="section-head">
+              <h3>Skin care</h3>
+              <p class="muted">Refill-friendly pick.</p>
+            </div>
+
+            <div class="grid">
+              <article class="p-card">
+                <img class="p-img" src="images/SuuBalmCreamyBodyWash.jpg" alt="Suu Balm Creamy Body Wash (Refill)">
+                <div class="p-chip">Refill pack</div>
+                <h3 class="p-title">Suu Balm Creamy Body Wash</h3>
+                <div class="p-price">S$18.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-suubalm">
+                    <label class="add-btn" for="q-suubalm-1">Add to cart</label>
+
+                    <div class="qty-ui q-suubalm" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-suubalm-0">−</label>
+                      <label class="qbtn minus m1" for="q-suubalm-0">−</label>
+                      <label class="qbtn minus m2" for="q-suubalm-1">−</label>
+                      <label class="qbtn minus m3" for="q-suubalm-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-suubalm-1">+</label>
+                      <label class="qbtn plus p1" for="q-suubalm-2">+</label>
+                      <label class="qbtn plus p2" for="q-suubalm-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+
+          <!-- =========================
+            FITNESS (NEW)
+          ========================== -->
+          <section id="Fitness" class="section">
+            <div class="section-head">
+              <h3>Fitness</h3>
+              <p class="muted">Performance essentials.</p>
+            </div>
+
+            <div class="grid">
+
+              <!-- Whey Protein -->
+              <article class="p-card">
+                <img class="p-img" src="images/whey.jpg" alt="Gold Standard 100% Whey Double Rich Chocolate(2lb)">
+                <div class="p-chip">Protein</div>
+                <h3 class="p-title">Whey Protein (1kg)</h3>
+                <p class="p-desc">
+                  A convenient daily protein boost for muscle recovery and training support.
+                </p>
+
+                <div class="p-meta-row">
+                  <span class="meta-badge">Post-workout</span>
+                  <span class="meta-badge">High protein</span>
+                </div>
+
+                <div class="p-bottom">
+                  <div class="p-price">S$49.90</div>
+
+                  <div class="cart-actions q-whey">
+                    <label class="add-btn" for="q-whey-1">Add to cart</label>
+
+                    <div class="qty-ui q-whey" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-whey-0">−</label>
+                      <label class="qbtn minus m1" for="q-whey-0">−</label>
+                      <label class="qbtn minus m2" for="q-whey-1">−</label>
+                      <label class="qbtn minus m3" for="q-whey-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-whey-1">+</label>
+                      <label class="qbtn plus p1" for="q-whey-2">+</label>
+                      <label class="qbtn plus p2" for="q-whey-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+              <!-- Creatine -->
+              <article class="p-card">
+                <img class="p-img" src="images/creatine.jpg" alt="CREATINE MONOHYDRATE UNFLAVORED (60 servings)">
+                <div class="p-chip">Performance</div>
+                <h3 class="p-title">Creatine Monohydrate (300g)</h3>
+                <p class="p-desc">
+                  Supports strength training performance and power output when used consistently.
+                </p>
+
+                <div class="p-meta-row">
+                  <span class="meta-badge">Strength</span>
+                  <span class="meta-badge">Training support</span>
+                </div>
+
+                <div class="p-bottom">
+                  <div class="p-price">S$29.90</div>
+
+                  <div class="cart-actions q-creatine">
+                    <label class="add-btn" for="q-creatine-1">Add to cart</label>
+
+                    <div class="qty-ui q-creatine" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-creatine-0">−</label>
+                      <label class="qbtn minus m1" for="q-creatine-0">−</label>
+                      <label class="qbtn minus m2" for="q-creatine-1">−</label>
+                      <label class="qbtn minus m3" for="q-creatine-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-creatine-1">+</label>
+                      <label class="qbtn plus p1" for="q-creatine-2">+</label>
+                      <label class="qbtn plus p2" for="q-creatine-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+
+          <!-- =========================
+            MOM & CUTIE
+          ========================== -->
+          <section id="mom-cutie" class="section">
+            <div class="section-head">
+              <h3>Mom &amp; cutie</h3>
+              <p class="muted">Baby essentials.</p>
+            </div>
+
+            <h4 id="baby" class="subhead">Baby</h4>
+            <div class="grid">
+              <article class="p-card">
+                <img class="p-img" src="images/QVGentleBabyWash.jpg" alt="QV Gentle Baby Wash">
+                <div class="p-chip">Baby bath</div>
+                <h3 class="p-title">QV Gentle Baby Wash</h3>
+                <div class="p-price">S$12.90</div>
+
+                <div class="p-bottom">
+                  <div class="cart-actions q-qv">
+                    <label class="add-btn" for="q-qv-1">Add to cart</label>
+
+                    <div class="qty-ui q-qv" aria-label="Quantity">
+                      <label class="qbtn minus m0" for="q-qv-0">−</label>
+                      <label class="qbtn minus m1" for="q-qv-0">−</label>
+                      <label class="qbtn minus m2" for="q-qv-1">−</label>
+                      <label class="qbtn minus m3" for="q-qv-2">−</label>
+
+                      <span class="qnum n0">0</span><span class="qnum n1">1</span><span class="qnum n2">2</span><span class="qnum n3">3</span>
+
+                      <label class="qbtn plus p0" for="q-qv-1">+</label>
+                      <label class="qbtn plus p1" for="q-qv-2">+</label>
+                      <label class="qbtn plus p2" for="q-qv-3">+</label>
+                      <span class="qbtn plus p3 is-disabled" aria-hidden="true">+</span>
+                    </div>
+                  </div>
+
+                  <label class="p-btn outline" for="cartToggle">VIEW CART</label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+        </section>
+      </div>
+    </main>
+
+
+    <!-- =========================
+      CART DRAWER (CSS ONLY)
+    ========================== -->
+    <aside class="drawer" aria-label="Cart drawer">
+      <label class="drawer-backdrop" for="cartToggle" aria-label="Close cart"></label>
+
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Cart">
+        <div class="drawer-head">
+          <h3>Collect in store</h3>
+          <label class="icon-btn" for="cartToggle" aria-label="Close">✕</label>
+        </div>
+
+        <div class="drawer-body">
+          <div class="pickup-card">
+            <div class="label">Pick-up location</div>
+            <select class="select">
+              <option>GreenHealth Pharmacy — Main Outlet</option>
+            </select>
+            <p class="muted small">Reserve online, collect at the counter.</p>
+          </div>
+
+          <div class="cart-box">
+            <div class="cart-title">Cart (CSS demo)</div>
+            <p class="muted small">
+              Items appear here when quantity &gt; 0. “Estimated total” is UI-only (no auto sum without JS).
+            </p>
+
+            <div class="cart-row row-gh-sunscreen">
+              <img src="images/PRODUCT-PIC.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">GreenHealth Mineral Sunscreen SPF50+</div>
+                <div class="cart-meta">
+                  S$15.90 • Qty:
+                  <span class="qv q-gh-sunscreen n0">0</span><span class="qv q-gh-sunscreen n1">1</span><span class="qv q-gh-sunscreen n2">2</span><span class="qv q-gh-sunscreen n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-gh-sunscreen-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-gh-refill">
+              <img src="images/Greenhealth-sunscreen-refill.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">GreenHealth Refill Starter Pack</div>
+                <div class="cart-meta">
+                  S$11.90 • Qty:
+                  <span class="qv q-gh-refill n0">0</span><span class="qv q-gh-refill n1">1</span><span class="qv q-gh-refill n2">2</span><span class="qv q-gh-refill n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-gh-refill-kit-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-ginkgo">
+              <img src="images/Ginkgo-2000.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">VitaHealth Ginkgo 2000mg</div>
+                <div class="cart-meta">
+                  S$32.90 • Qty:
+                  <span class="qv q-ginkgo n0">0</span><span class="qv q-ginkgo n1">1</span><span class="qv q-ginkgo n2">2</span><span class="qv q-ginkgo n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-ginkgo-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-thomson">
+              <img src="images/thomson-ginko.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Thomson Ginkgo 40mg</div>
+                <div class="cart-meta">
+                  S$26.90 • Qty:
+                  <span class="qv q-thomson n0">0</span><span class="qv q-thomson n1">1</span><span class="qv q-thomson n2">2</span><span class="qv q-thomson n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-thomson-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-d3">
+              <img src="images/Blackmores-Vitamin-D3.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Blackmores Vitamin D3 1000IU</div>
+                <div class="cart-meta">
+                  S$25.90 • Qty:
+                  <span class="qv q-d3 n0">0</span><span class="qv q-d3 n1">1</span><span class="qv q-d3 n2">2</span><span class="qv q-d3 n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-d3-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-swissecal">
+              <img src="images/swisse-calcium.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Swisse Calcium + Vitamin D</div>
+                <div class="cart-meta">
+                  S$39.90 • Qty:
+                  <span class="qv q-swissecal n0">0</span><span class="qv q-swissecal n1">1</span><span class="qv q-swissecal n2">2</span><span class="qv q-swissecal n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-swisse-cal-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-caltrate">
+              <img src="images/caltrate.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Caltrate 600 + D</div>
+                <div class="cart-meta">
+                  S$42.90 • Qty:
+                  <span class="qv q-caltrate n0">0</span><span class="qv q-caltrate n1">1</span><span class="qv q-caltrate n2">2</span><span class="qv q-caltrate n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-caltrate-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-enzymes">
+              <img src="images/holistic-way-digestive-enzymes.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Holistic Way Digestive Enzymes</div>
+                <div class="cart-meta">
+                  S$34.90 • Qty:
+                  <span class="qv q-enzymes n0">0</span><span class="qv q-enzymes n1">1</span><span class="qv q-enzymes n2">2</span><span class="qv q-enzymes n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-enzymes-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-probiotic">
+              <img src="images/vitahealth-pre+probiotic.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">VitaHealth Pre + Pro Biotics</div>
+                <div class="cart-meta">
+                  S$36.90 • Qty:
+                  <span class="qv q-probiotic n0">0</span><span class="qv q-probiotic n1">1</span><span class="qv q-probiotic n2">2</span><span class="qv q-probiotic n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-probiotic-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-lactogg">
+              <img src="images/lacto-gg.png" alt="">
+              <div class="cart-text">
+                <div class="cart-name">LACTO GG Capsules (30s)</div>
+                <div class="cart-meta">
+                  S$29.90 • Qty:
+                  <span class="qv q-lactogg n0">0</span><span class="qv q-lactogg n1">1</span><span class="qv q-lactogg n2">2</span><span class="qv q-lactogg n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-lactogg-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-suubalm">
+              <img src="images/SuuBalmCreamyBodyWash.jpg" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Suu Balm Creamy Body Wash</div>
+                <div class="cart-meta">
+                  S$18.90 • Qty:
+                  <span class="qv q-suubalm n0">0</span><span class="qv q-suubalm n1">1</span><span class="qv q-suubalm n2">2</span><span class="qv q-suubalm n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-suubalm-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-qv">
+              <img src="images/QVGentleBabyWash.jpg" alt="">
+              <div class="cart-text">
+                <div class="cart-name">QV Gentle Baby Wash</div>
+                <div class="cart-meta">
+                  S$12.90 • Qty:
+                  <span class="qv q-qv n0">0</span><span class="qv q-qv n1">1</span><span class="qv q-qv n2">2</span><span class="qv q-qv n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-qv-0">Remove</label>
+            </div>
+
+            <!-- Fitness rows (NEW) -->
+            <div class="cart-row row-whey">
+              <img src="images/whey.jpg" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Whey Protein (1kg)</div>
+                <div class="cart-meta">
+                  S$49.90 • Qty:
+                  <span class="qv q-whey n0">0</span><span class="qv q-whey n1">1</span><span class="qv q-whey n2">2</span><span class="qv q-whey n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-whey-0">Remove</label>
+            </div>
+
+            <div class="cart-row row-creatine">
+              <img src="images/creatine.jpg" alt="">
+              <div class="cart-text">
+                <div class="cart-name">Creatine Monohydrate (300g)</div>
+                <div class="cart-meta">
+                  S$29.90 • Qty:
+                  <span class="qv q-creatine n0">0</span><span class="qv q-creatine n1">1</span><span class="qv q-creatine n2">2</span><span class="qv q-creatine n3">3</span>
+                </div>
+              </div>
+              <label class="cart-remove" for="q-creatine-0">Remove</label>
+            </div>
+
+            <div class="cart-empty">
+              Your cart is empty. Click “Add to cart” on any item to start.
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer-foot">
+          <div class="row">
+            <span class="muted">Estimated total</span>
+            <strong>S$0.00</strong>
+          </div>
+          <a class="btn btn-full" href="checkout.html">Reserve for collection</a>
+          <p class="tiny muted">
+            Tip: For real totals + payment, connect Shopify/WooCommerce or add JS later.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Floating cart button -->
+    <label class="cart-float" for="cartToggle" aria-label="Open cart">
+      🛒 Cart <span class="cart-count" aria-label="Items in cart"></span>
+    </label>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-title">GreenHealth Pharmacy</div>
+          <div class="muted">Sustainable healthcare for our community — one green habit at a time.</div>
+        </div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="cookies.html">Cookie Policy</a>
+          <a href="accessibility.html">Accessibility</a>
+        </div>
+        
+       <footer class="footer">
+        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+      </footer>
+    </section>
+  </main>
+  </div>
+</body>
+</html>

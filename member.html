@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base target="_self">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Credit Membership | GreenHealth Pharmacy</title>
+  <meta name="description" content="Join GreenHealth Pharmacy's Green Credit membership. Earn points for sustainable actions, redeem rewards, and help reduce waste.">
+
+  <!-- ✅ OG site styles (for utility bar + header + dropdown) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ Tailwind for the member page sections -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#10b981",
+            secondary: "#059669",
+            accent: "#047857",
+            light: "#d1fae5",
+            dark: "#064e3b",
+            gold: "#fbbf24"
+          },
+          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          animation: {
+            "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            "float": "float 3s ease-in-out infinite",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+
+    .hero-bg {
+      background:
+        radial-gradient(900px 600px at 18% 10%, rgba(16,185,129,0.22), transparent 60%),
+        radial-gradient(700px 450px at 86% 22%, rgba(251,191,36,0.18), transparent 60%),
+        linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .soft-border { border: 1px solid rgba(17, 24, 39, 0.10); }
+
+    .card-hover { transition: all 0.25s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+    .points-badge {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .eco-icon {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* FAQ stable */
+    summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+
+<body id="member-page" class="min-h-screen bg-gray-50">
+
+  <!-- ✅ LOGIN LINK FOR ALL MEMBER ACTION BUTTONS -->
+  <script>
+    const LOGIN_URL = "https://pharma-loyalty-3e61a98a.base44.app/login?from_url=https%3A%2F%2Fpharma-loyalty-3e61a98a.base44.app%2FProfile";
+  </script>
+
+
+
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+        </div>
+        <div>
+          <div class="brand-name">GreenHealth Pharmacy</div>
+          <div class="brand-tagline">Healthier living, zero-waste innovation</div>
+        </div>
+      </a>
+
+      <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+
+        <div class="nav-dropdown">
+          <a class="mainnav-link" href="about.html">
+            ABOUT <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about.html">About Us</a>
+            <a class="dropdown-link" href="vision.html">Vision and Mission</a>
+            <a class="dropdown-link" href="follow-us.html">Follow Us</a>
+            <a class="dropdown-link" href="joinourcommunity.html">Join Our Community</a>
+          </div>
+        </div>
+
+              <!-- ✅ SERVICES dropdown (click to open) -->
+      <div class="nav-dropdown" tabindex="0">
+        <a class="mainnav-link" href="#" aria-haspopup="true" aria-expanded="false">
+          SERVICES <span class="chev">▾</span>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <!-- ✅ Pharmacy Services goes to THIS page -->
+          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+          <!-- ✅ Specialised page -->
+          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        </div>
+      </div>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link" href="products.html">PRODUCTS</a>
+        <a class="mainnav-link" href="locator.html">LOCATOR</a>
+        <a class="mainnav-link " href="for-ms-annie.html">FOR MS ANNIE</a>
+        <a class="mainnav-link" href="contact.html">CONTACT</a>
+        <a class="mainnav-link member-pill" href="member.html"><span class="member-dot">●</span> MEMBER</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ HERO -->
+  <section class="hero-bg py-12 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start member-hero-grid">
+
+        <!-- Left -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="inline-flex items-center px-4 py-2 rounded-full glass text-green-700 font-semibold">
+              <i class="fas fa-seedling mr-2"></i> Membership Loyalty Programme
+            </div>
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-yellow-50 text-yellow-700 font-semibold soft-border">
+              <i class="fas fa-star mr-2"></i> Star Service
+            </div>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+            The Green Credit
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-800 font-semibold mb-4">
+            Earn points. Save money. Reduce waste.
+          </p>
+
+          <p class="text-gray-700 max-w-xl mb-10">
+            Get rewarded not just for shopping, but for greener habits like digital receipts,
+            reusing bags, and returning expired medicines for safe disposal.
+          </p>
+
+          <p class="text-sm text-gray-500 mb-4">Available in the GreenCredit Membership app.</p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a class="loginLink bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-xl transition-colors inline-flex items-center justify-center shadow-sm"
+               href="#">
+              <i class="fas fa-user-plus mr-2"></i> Join Now (Click)
+            </a>
+
+            <a href="#rewards"
+               class="bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-8 rounded-xl transition-colors inline-flex items-center justify-center soft-border shadow-sm">
+              <i class="fas fa-gift mr-2"></i> View Rewards
+            </a>
+
+            <a class="loginLink bg-transparent border-2 border-green-700 text-green-800 hover:bg-white font-bold py-3 px-8 rounded-xl transition-colors inline-flex items-center justify-center"
+               href="#">
+              <i class="fas fa-qrcode mr-2"></i> Check My Points
+            </a>
+          </div>
+
+          <div class="mt-6 text-sm text-gray-600">
+            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+            Free to join. Points valid for 12 months.
+          </div>
+        </div>
+
+        <!-- Right (clean / not too clustered) -->
+        <div class="relative md:mt-14 member-hero-right">
+          <div class="bg-white rounded-2xl shadow-xl p-7 md:p-9 soft-border">
+
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <p class="text-sm text-gray-500 font-semibold">Simple perks, real impact</p>
+                <h3 class="text-2xl font-bold text-gray-900 leading-snug">
+                  Earn more when you go green
+                </h3>
+              </div>
+
+              <div class="inline-flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-sm animate-float soft-border">
+                <i class="fas fa-seedling text-3xl eco-icon"></i>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between bg-gray-50 rounded-xl p-4 soft-border">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-coins text-yellow-600"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Earn rate</div>
+                    <div class="text-sm text-gray-600">$1 = 1 point</div>
+                  </div>
+                </div>
+                <span class="points-badge px-3 py-1 rounded-full text-sm">Base</span>
+              </div>
+
+              <div class="flex items-center justify-between bg-gray-50 rounded-xl p-4 soft-border">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-leaf text-green-600"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Green actions</div>
+                    <div class="text-sm text-gray-600">Bonus points</div>
+                  </div>
+                </div>
+                <span class="points-badge px-3 py-1 rounded-full text-sm">+Bonus</span>
+              </div>
+
+              <div class="flex items-center justify-between bg-gray-50 rounded-xl p-4 soft-border">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-birthday-cake text-pink-600"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Birthday</div>
+                    <div class="text-sm text-gray-600">Reward month</div>
+                  </div>
+                </div>
+                <span class="points-badge px-3 py-1 rounded-full text-sm">🎁</span>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-700 text-white p-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-sm opacity-90">Top green action</div>
+                  <div class="text-xl font-bold">Return medicines safely</div>
+                  <div class="text-sm opacity-90 mt-1">Earn <span class="font-bold">+5 points</span> per return</div>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center">
+                  <i class="fas fa-pills text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="absolute -top-6 -right-6 w-16 h-16 rounded-2xl bg-yellow-200/60 blur-sm"></div>
+          <div class="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-green-200/60 blur-sm"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ MEMBER BENEFITS -->
+  <section class="py-16 bg-white member-tone-benefits">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-3">Member Benefits</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Not just discounts — you get rewarded for greener habits too.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 shadow-md card-hover soft-border">
+          <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-coins text-xl text-yellow-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Earn & Redeem Green Credits</h3>
+          <p class="text-gray-600 text-sm">Earn points when you spend and get bonus points from green actions.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-md card-hover soft-border">
+          <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-ticket-alt text-xl text-indigo-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Members-only Vouchers</h3>
+          <p class="text-gray-600 text-sm">Exclusive bundles and limited-time deals redeemed via Green Credit membership app.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-md card-hover soft-border">
+          <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-spray-can text-xl text-green-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Free Samples (QR Scan)</h3>
+          <p class="text-gray-600 text-sm">Scan your member QR to receive up to 10ml sunscreen sample (limits apply).</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-md card-hover soft-border">
+          <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-birthday-cake text-xl text-pink-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Birthday Month Rewards</h3>
+          <p class="text-gray-600 text-sm">Enjoy a points bonus during your birthday month.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-md card-hover soft-border lg:col-span-2">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+              <i class="fas fa-tree text-xl text-emerald-700"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Tier Up for Better Perks</h3>
+              <p class="text-gray-600 text-sm">The more you shop and go green, the higher your tier and the better your rewards.</p>
+              <a href="#tiers" class="inline-flex items-center text-green-700 font-semibold mt-3 hover:text-green-800">
+                View tiers <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ HOW IT WORKS -->
+  <section class="py-16 bg-gray-50 gc-how-it-works member-tone-how">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-3">How Green Credit Works</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">3 steps. No fuss.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover text-center">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-user-plus text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">1. Join for free</h3>
+          <p class="text-gray-600">Sign up online or in-store.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover text-center">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-qrcode text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">2. Scan your QR</h3>
+          <p class="text-gray-600">Scan at checkout to track points.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover text-center">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-gift text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">3. Redeem rewards</h3>
+          <p class="text-gray-600">Use points for vouchers and perks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- ✅ Rules (put right under your 3-step How it works cards) -->
+<div class="gc-rules">
+  <div class="gc-rules__item">
+    <i class="fas fa-hourglass-half"></i>
+    <span><strong>12-month</strong> validity</span>
+  </div>
+  <div class="gc-rules__divider" aria-hidden="true"></div>
+  <div class="gc-rules__item">
+    <i class="fas fa-receipt"></i>
+    <span><strong>1 voucher</strong> per transaction</span>
+  </div>
+</div>
+
+<!-- ✅ Place: Mobile App + In-store (with ticks + breathing space from rules) -->
+<div class="gc-place-grid">
+  <div class="gc-place-card gc-place-card--app">
+    <div class="gc-place-head">
+      <div class="gc-place-icon bg-indigo">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div>
+        <h3 class="gc-place-title">Mobile App (Green Credit Membership App)</h3>
+        <p class="gc-place-sub">Use it anywhere, anytime</p>
+      </div>
+    </div>
+
+    <ul class="gc-ticks">
+      <li><i class="fas fa-check"></i> Digital membership card + QR</li>
+      <li><i class="fas fa-check"></i> Point tracking &amp; redemption</li>
+      <li><i class="fas fa-check"></i> Referral feature + digital receipts</li>
+    </ul>
+  </div>
+
+  <div class="gc-place-card gc-place-card--store">
+    <div class="gc-place-head">
+      <div class="gc-place-icon bg-amber">
+        <i class="fas fa-store"></i>
+      </div>
+      <div>
+        <h3 class="gc-place-title">In-store</h3>
+        <p class="gc-place-sub">Fast, simple checkout</p>
+      </div>
+    </div>
+
+    <ul class="gc-ticks">
+      <li><i class="fas fa-check"></i> Scan QR at checkout</li>
+      <li><i class="fas fa-check"></i> Redeem vouchers instantly</li>
+    </ul>
+  </div>
+</div>
+  <!-- ✅ EARN POINTS TABLE -->
+  <section class="mt-10 py-16 bg-gray-50 member-tone-points">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Earn Green Credit Points</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Every sustainable action earns you points and helps our planet</p>
+      </div>
+
+      <div class="max-w-6xl mx-auto overflow-hidden rounded-xl shadow-lg">
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="py-4 px-6 text-left font-bold">Action</th>
+                <th class="py-4 px-6 text-left font-bold">Reward (The "Green Credit")</th>
+                <th class="py-4 px-6 text-left font-bold">Sustainability Benefits</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                      <i class="fas fa-shopping-cart text-xl text-yellow-600"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-gray-900">Spend at GreenHealth</h3>
+                      <p class="text-sm text-gray-600">Earn on every purchase</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <span class="points-badge px-4 py-2 rounded-full mr-3">1 point</span>
+                    <div>
+                      <p class="font-medium text-gray-900">$1 = 1 point</p>
+                      <p class="text-sm text-gray-600">Base earn rate</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <p class="text-gray-700">—</p>
+                </td>
+              </tr>
+
+              <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                      <i class="fas fa-pills text-xl text-red-600"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-gray-900">Returning expired/unused medication</h3>
+                      <p class="text-sm text-gray-600">Safe disposal programme</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <span class="points-badge px-4 py-2 rounded-full mr-3">+5 points</span>
+                    <div>
+                      <p class="font-medium text-gray-900">Per return</p>
+                      <p class="text-sm text-gray-600">Bonus green action</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <p class="text-gray-700">Proper disposal reduces environmental contamination and builds trust.</p>
+                </td>
+              </tr>
+
+              <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <i class="fas fa-receipt text-xl text-blue-600"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-gray-900">Digital-only receipts</h3>
+                      <p class="text-sm text-gray-600">Per transaction</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <span class="points-badge px-4 py-2 rounded-full mr-3">+1 point</span>
+                    <div>
+                      <p class="font-medium text-gray-900">Every digital receipt counts</p>
+                      <p class="text-sm text-gray-600">Bonus green action</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <p class="text-gray-700">Reduces paper waste and keeps things fast and neat.</p>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-green-50 transition-colors">
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                      <i class="fas fa-shopping-bag text-xl text-green-600"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-gray-900">Reusable bag</h3>
+                      <p class="text-sm text-gray-600">Bring your own / reuse</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <div class="flex items-center">
+                    <span class="points-badge px-4 py-2 rounded-full mr-3">+1 point</span>
+                    <div>
+                      <p class="font-medium text-gray-900">Per transaction</p>
+                      <p class="text-sm text-gray-600">Bonus green action</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-6 px-6">
+                  <p class="text-gray-700">Reduces plastic waste and builds a habit that sticks.</p>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-prescription-bottle-alt text-xl text-purple-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Sunscreen refills</h3>
+          <p class="text-gray-600 text-sm">Earn +3 points per refill</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-user-friends text-xl text-yellow-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Refer a friend</h3>
+          <p class="text-gray-600 text-sm">Earn +10 points when they join</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-birthday-cake text-xl text-pink-600"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Birthday bonus</h3>
+          <p class="text-gray-600 text-sm">+25 points (birthday month)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ TIERS -->
+  <section id="tiers" class="pt-8 pb-16 bg-gray-50 member-tone-tiers">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-3">Membership Tiers</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Earn more perks as you shop and go green.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-gray-900">Seed</h3>
+            <i class="fas fa-seedling text-2xl text-green-600"></i>
+          </div>
+          <p class="text-sm text-gray-600 mb-5"><span class="font-semibold">Qualify:</span> New members</p>
+          <ul class="space-y-2 text-gray-700">
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Base earn rate + member promos</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover border-2 border-green-500">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-gray-900">Sprout</h3>
+            <i class="fas fa-leaf text-2xl text-green-700"></i>
+          </div>
+          <p class="text-sm text-gray-600 mb-5">
+            <span class="font-semibold">Qualify:</span> 500 points OR 15 green actions (per year)
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li><i class="fas fa-check text-green-600 mr-2"></i><span class="font-semibold">+10%</span> bonus points on green actions</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 shadow-md soft-border card-hover">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-gray-900">Tree</h3>
+            <i class="fas fa-tree text-2xl text-emerald-700"></i>
+          </div>
+          <p class="text-sm text-gray-600 mb-5">
+            <span class="font-semibold">Qualify:</span> 1000 points OR 25 green actions (per year)
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li><i class="fas fa-check text-green-600 mr-2"></i><span class="font-semibold">+20%</span> bonus points on green actions</li>
+            <li><i class="fas fa-check text-green-600 mr-2"></i>Priority promos + bigger birthday bonus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ REWARDS -->
+  <section id="rewards" class="py-16 bg-white member-tone-rewards">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-3">Redeem Your Points</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Turn points into vouchers and perks.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto place-items-center">
+        <div class="w-full max-w-md bg-white rounded-2xl p-8 text-center card-hover soft-border shadow-md">
+          <div class="points-badge inline-block px-6 py-2 rounded-full mb-4">100 Points</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">$2 Voucher</h3>
+          <p class="text-gray-600 mb-6">Min spend $15</p>
+          <a class="loginLink w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 rounded-xl transition-colors inline-flex items-center justify-center"
+             href="#">
+            Redeem Now
+          </a>
+        </div>
+
+        <div class="w-full max-w-md bg-gradient-to-b from-green-50 to-white rounded-2xl p-8 text-center card-hover soft-border shadow-md border-2 border-green-500 relative">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+          </div>
+          <div class="points-badge inline-block px-6 py-2 rounded-full mb-4 mt-2">60 Points</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">GreenHealth Tote Bag</h3>
+          <p class="text-gray-600 mb-3">Redeem with 60 points OR get it FREE with the purchase of GreenHealth sunscreen bundle</p>
+          <p class="text-gray-600 mb-6">While stocks last. Limited to 1 per member.</p>
+          <a class="loginLink w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors inline-flex items-center justify-center"
+             href="#">
+            Redeem Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="member-section alt member-tone-updates">
+    <div class="member-wrap">
+      <section class="gc-updates">
+  <div class="gc-updates-head">
+    <div>
+      <h2 class="gc-updates-title">
+        <i class="fas fa-bullhorn"></i> Member-only Perks &amp; Updates
+      </h2>
+      <p class="gc-updates-sub">Stay updated and enjoy exclusive member benefits.</p>
+    </div>
+
+    <div class="gc-lock-note">
+      <i class="fas fa-lock"></i> For Green Credit members
+    </div>
+  </div>
+
+  <div class="gc-updates-grid">
+    <!-- Channels -->
+    <div class="gc-updates-card">
+      <div class="gc-card-top">
+        <div class="gc-mini-icon bg-purple">
+          <i class="fas fa-broadcast-tower"></i>
+        </div>
+        <h3>Channels</h3>
+      </div>
+
+      <div class="gc-social-row">
+        <span class="gc-social-chip chip-telegram">
+          <i class="fab fa-telegram-plane"></i> Telegram
+        </span>
+        <span class="gc-social-chip chip-instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </span>
+        <span class="gc-social-chip chip-tiktok">
+          <i class="fab fa-tiktok"></i> TikTok
+        </span>
+      </div>
+
+      <p class="gc-small muted">Membership updates and information can be found on our social platforms.</p>
+    </div>
+
+    <!-- Free sample promo -->
+    <div class="gc-updates-card">
+      <div class="gc-card-top">
+        <div class="gc-mini-icon bg-green">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3>New member welcome</h3>
+      </div>
+
+      <ul class="gc-ticks">
+        <li><i class="fas fa-check"></i> Free <strong>10ml sunscreen sample</strong> (QR scan)</li>
+        <li><i class="fas fa-check"></i> Limits apply (availability + store policy)</li>
+      </ul>
+    </div>
+
+    <!-- In-store exclusives -->
+    <div class="gc-updates-card">
+      <div class="gc-card-top">
+        <div class="gc-mini-icon bg-amber">
+          <i class="fas fa-store"></i>
+        </div>
+        <h3>In-store exclusives</h3>
+      </div>
+
+      <ul class="gc-ticks">
+        <li><i class="fas fa-check"></i> Member-only bundles at counter</li>
+        <li><i class="fas fa-check"></i> Staff prompts to help you sign up</li>
+        <li><i class="fas fa-check"></i> Instant redemption at checkout</li>
+      </ul>
+    </div>
+
+    <!-- In-app updates -->
+    <div class="gc-updates-card">
+      <div class="gc-card-top">
+        <div class="gc-mini-icon bg-indigo">
+          <i class="fas fa-bell"></i>
+        </div>
+        <h3>In-app updates</h3>
+      </div>
+
+      <ul class="gc-ticks">
+        <li><i class="fas fa-check"></i> Points milestones</li>
+        <li><i class="fas fa-check"></i> Birthday bonus reminders</li>
+        <li><i class="fas fa-check"></i> New rewards added</li>
+      </ul>
+    </div>
+
+    <!-- Partner discounts + brands -->
+    <div class="gc-updates-card gc-updates-card--span">
+      <div class="gc-card-top">
+        <div class="gc-mini-icon bg-teal">
+          <i class="fas fa-tags"></i>
+        </div>
+        <h3>Partner discounts</h3>
+      </div>
+
+      <p class="gc-small">Members-only offers on selected partner brands (exclusive deals not available to non-members).</p>
+
+      <div class="gc-brand-row">
+        <span class="gc-brand">Selimac</span>
+        <span class="gc-brand">Blackmores</span>
+        <span class="gc-brand">QV</span>
+        <span class="gc-brand">La Roche-Posay</span>
+        <span class="gc-brand">Cetaphil</span>
+      </div>
+    </div>
+  </div>
+      </section>
+    </div>
+  </section>
+  <!-- ✅ FAQ -->
+  <section class="py-16 bg-white member-tone-faq">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="member-section-title text-3xl md:text-4xl font-bold text-gray-900 mb-3">FAQ</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Quick answers to common questions. (Please click)</p>
+      </div>
+
+      <div id="faqWrap" class="max-w-3xl mx-auto space-y-4">
+        <details class="rounded-2xl bg-gray-50 soft-border overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between">
+            <span class="font-semibold text-gray-900">Is the membership free?</span>
+            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+          </summary>
+          <div class="px-6 pb-5 text-gray-700">Yes, it’s free to join. We want you to enjoy member savings through exclusive discounts, Green Credits, and members-only perks with no sign-up fees and no hidden charges. Join anytime, no commitment required.</div>
+        </details>
+
+        <details class="rounded-2xl bg-gray-50 soft-border overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between">
+            <span class="font-semibold text-gray-900">How do I earn points?</span>
+            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+          </summary>
+          <div class="px-6 pb-5 text-gray-700">
+            Scan your member QR at checkout. You’ll earn 1 point for every $1 spent. Earn bonus points for choosing green actions like digital receipts, using a reusable bag, and returning expired medicines.
+          </div>
+        </details>
+
+        <details class="rounded-2xl bg-gray-50 soft-border overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between">
+            <span class="font-semibold text-gray-900">Do points expire?</span>
+            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+          </summary>
+          <div class="px-6 pb-5 text-gray-700">
+            Points are valid for <span class="font-semibold">12 months</span> from the date earned.
+          </div>
+        </details>
+
+        <details class="rounded-2xl bg-gray-50 soft-border overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between">
+            <span class="font-semibold text-gray-900">Can I return expired medicines anytime?</span>
+            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+          </summary>
+          <div class="px-6 pb-5 text-gray-700">
+            Yes. Our team will collect them for safe disposal.
+          </div>
+        </details>
+
+        <details class="rounded-2xl bg-gray-50 soft-border overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 flex items-center justify-between">
+            <span class="font-semibold text-gray-900">Can I combine vouchers?</span>
+            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+          </summary>
+          <div class="px-6 pb-5 text-gray-700">
+            Only <span class="font-semibold">one voucher per transaction</span>.
+          </div>
+        </details>
+
+        <div class="rounded-2xl bg-green-50 soft-border p-6 mt-6">
+          <div class="flex items-start">
+            <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center mr-4">
+              <i class="fas fa-info-circle text-green-700"></i>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-1">Terms & Conditions (Summary)</p>
+              <p class="text-sm text-gray-700">
+                Green Credit points are non-transferable and cannot be exchanged for cash.
+                GreenHealth may update the rewards catalogue and point rules with notice.
+                Misuse of the programme may result in account suspension.
+                Sample dispensing and green action bonuses are subject to limits and store policy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ CTA -->
+  <section class="py-16 bg-gradient-to-r from-green-600 to-emerald-700">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to join?</h2>
+        <p class="text-xl mb-8 opacity-90">Start earning Green Credit today.</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a class="loginLink bg-white text-green-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-xl transition-colors inline-flex items-center justify-center"
+             href="#">
+            <i class="fas fa-user-plus mr-2"></i> Sign Up Now
+          </a>
+
+          <a class="loginLink bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-700 font-bold py-3 px-8 rounded-xl transition-colors inline-flex items-center justify-center"
+             href="#">
+            <i class="fas fa-qrcode mr-2"></i> Check My Points
+          </a>
+        </div>
+
+        <p class="mt-6 text-sm opacity-90">
+          Already a member?
+          <a class="loginLink underline font-semibold" href="#">Log in here</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+   <footer class="footer">
+        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+      </footer>
+    </section>
+  </main>
+
+  <!-- ✅ OG script (your dropdown behaviour etc.) -->
+  <script src="script.js"></script>
+
+  <!-- ✅ Member page scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Link ALL login buttons to your external login URL
+      document.querySelectorAll('.loginLink').forEach(a => a.href = LOGIN_URL);
+
+      // FAQ: only one open at a time
+      const faqWrap = document.getElementById('faqWrap');
+      if (faqWrap) {
+        const detailsList = faqWrap.querySelectorAll('details');
+        detailsList.forEach(d => {
+          d.addEventListener('toggle', () => {
+            if (d.open) {
+              detailsList.forEach(other => { if (other !== d) other.open = false; });
+            }
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

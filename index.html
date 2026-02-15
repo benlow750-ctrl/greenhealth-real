@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenHealth Pharmacy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+        </div>
+        <div>
+          <div class="brand-name">GreenHealth Pharmacy</div>
+          <div class="brand-tagline">Healthier living, zero-waste innovation</div>
+        </div>
+      </a>
+
+      <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+
+        <div class="nav-dropdown">
+          <a class="mainnav-link" href="about.html">
+            ABOUT <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about.html">About Us</a>
+            <a class="dropdown-link" href="vision.html">Vision and Mission</a>
+            <a class="dropdown-link" href="follow-us.html">Follow Us</a>
+            <a class="dropdown-link" href="joinourcommunity.html">Join Our Community</a>
+          </div>
+        </div>
+
+              <!-- ✅ SERVICES dropdown (click to open) -->
+      <div class="nav-dropdown" tabindex="0">
+        <a class="mainnav-link" href="#" aria-haspopup="true" aria-expanded="false">
+          SERVICES <span class="chev">▾</span>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+          <!-- ✅ Pharmacy Services goes to THIS page -->
+          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+          <!-- ✅ Specialised page -->
+          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        </div>
+      </div>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link" href="products.html">PRODUCTS</a>
+        <a class="mainnav-link" href="locator.html">LOCATOR</a>
+        <a class="mainnav-link" href="for-ms-annie.html">FOR MS ANNIE</a>
+        <a class="mainnav-link" href="contact.html">CONTACT</a>
+        <a class="mainnav-link member-pill" href="member.html"><span class="member-dot">●</span> MEMBER</a>
+      </nav>
+    </div>
+  </header>
+<!-- Banner slider -->
+<section class="banner">
+  <div class="container">
+    <div class="slider">
+
+      <!-- Slide 1 -->
+      <div class="slide is-active slide-bg" style="--slide-bg: url('images/homehero1.jpg');">
+        <div class="slide-inner">
+          <div>
+           
+            <h1 class="slide-title">Sustainable Pharmacy for Everyday Wellness</h1>
+            <p class="slide-sub">
+              Explore our star products, Join our Membership, and earn rewards for greener choices—good for you and the planet.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn primary" href="sunscreens.html">Star Products</a>
+              <a class="btn" href="member.html">Earn Green Credit</a>
+            </div>
+          </div>
+
+          <div class="slide-art"></div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide slide-bg" style="--slide-bg: url('images/homehero2.jpg');">
+        <div class="slide-inner">
+          <div>
+            <h1 class="slide-title">Fast Refills</h1>
+            <p class="slide-sub">
+              Request a refill, get notified when it’s ready, and pick up quickly.
+            </p>
+
+            <div class="benefits">
+              <div class="benefit-card">
+                <div class="benefit-icon">💊</div>
+                <div>
+                  <div class="benefit-top">Refill Support</div>
+                  <div class="benefit-bottom">Simple and convenient</div>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🚚</div>
+                <div>
+                  <div class="benefit-top">Click and Collect</div>
+                  <div class="benefit-bottom">For selected items</div>
+                </div>
+              </div>
+
+              <div class="benefit-mini">
+                <span class="mini-strong">Need help?</span> Ask our pharmacist
+              </div>
+            </div>
+
+            <a class="btn primary" href="products.html">Shop Now</a>
+            <a class="btn" href="services.html">Explore Services</a>
+          </div>
+
+          <div class="slide-art"></div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide slide-bg" style="--slide-bg: url('images/homehero3.jpg');">
+        <div class="slide-inner">
+          <div>
+            
+            <h1 class="slide-title">Go Greener</h1>
+            <p class="slide-sub">
+              Responsible packaging, reduced waste, and community health education.
+            </p>
+
+            <div class="benefits">
+              <div class="benefit-card">
+                <div class="benefit-icon">♻️</div>
+                <div>
+                  <div class="benefit-top">Less Waste</div>
+                  <div class="benefit-bottom">Smarter inventory &amp; recycling</div>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🌿</div>
+                <div>
+                  <div class="benefit-top">Eco Choices</div>
+                  <div class="benefit-bottom">Better habits together</div>
+                </div>
+              </div>
+
+              <div class="benefit-mini">
+                <span class="mini-strong">Small steps</span> make a big impact
+              </div>
+            </div>
+
+            <a class="btn primary" href="sustainability.html">See Our Initiatives</a>
+          </div>
+
+          <div class="slide-art"></div>
+        </div>
+      </div>
+
+      <!-- SLIDER BUTTONS (moved here) -->
+      <div class="slider-controls">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <section class="container section">
+    <div class="highlights">
+      <div class="highlight-card reveal">
+        <h3>Who Are We?</h3>
+        <p>
+          GreenHealth pharmacy is the only pharmacy that pairs trusted healthcare with
+          sustainable choices.
+        </p>
+      </div>
+
+      <div class="highlight-card reveal">
+        <h3>Why should I care?</h3>
+        <p>
+          Less waste=Greener Earth+rewards for doing the right thing
+          without giving up convenience.
+        </p>
+      </div>
+
+      <div class="highlight-card reveal">
+        <h3>Explore Sustainable Wellness</h3>
+        <p>
+          Browse curated, eco-friendly essentials worry free 
+        </p>
+        <a class="btn" href="products.html">Browse Products</a>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+  <!-- 3 quick highlights -->
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Greener Choices, Made Simple</h2>
+      
+    </div>
+
+    <div class="highlights">
+      <div class="highlight-card reveal">
+        <div class="highlight-icon">
+          <span class="highlight-icon-inner">🌿</span>
+        </div>
+        <div class="highlight-title">Sustainable Procurement</div>
+        <div class="highlight-text">Curated products with more responsible sourcing and packaging.</div>
+      </div>
+
+      <div class="highlight-card reveal">
+        <div class="highlight-icon">♻️</div>
+        <div class="highlight-title">Return &amp; Dispose Responsibly</div>
+        <div class="highlight-text">Bring back expired medication for safer disposal and rewards.</div>
+      </div>
+
+      <div class="highlight-card reveal">
+        <div class="highlight-icon">📲</div>
+        <div class="highlight-title">Rewards via Green Credit App</div>
+        <div class="highlight-text">Earn points for purchases and eco-actions—then redeem perks.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured categories (cards) -->
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Featured Categories</h2>
+      <p class="section-subtitle">Shop at our very own sustainable wellness store.</p>
+    </div>
+
+    <div class="category-grid">
+      <a class="category-card" href="products.html#supplements">
+        <div class="category-title">Supplements</div>
+        <div class="category-meta">Daily health support</div>
+      </a>
+
+      <a class="category-card" href="products.html#fitness">
+        <div class="category-title">Fitness</div>
+        <div class="category-meta">Recovery & performance</div>
+      </a>
+
+      <a class="category-card" href="products.html#health-foods">
+        <div class="category-title">Skin Care</div>
+        <div class="category-meta">Better-for-you skin</div>
+      </a>
+
+      <a class="category-card" href="products.html#otc">
+        <div class="category-title">Mom & Cutie</div>
+        <div class="category-meta">Pregnancy & baby essentials</div>
+      </a>
+
+      <a class="category-card" href="products.html#personal-care">
+        <div class="category-title">Health Foods</div>
+        <div class="category-meta">Healthy food, Healthy you</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Exclusive spotlight -->
+  <section class="container section">
+    <div class="spotlight spotlight--premium reveal">
+      <div class="spotlight-left">
+        <div class="spotlight-badge">
+          <span class="spotlight-badge-dot"></span>
+          <b>Exclusive Spotlight</b>
+        </div>
+
+        <h2 class="spotlight-title">NSC ECO SHIELD</h2>
+
+        <p class="spotlight-text">
+          A skin-friendly sunscreen designed with sustainability in mind—available exclusively at GreenHealth.
+        </p>
+
+        <ul class="spotlight-points">
+          <li>Refill-ready packaging</li>
+          <li>Reef-conscious ingredients</li>
+          <li>Lower-waste distribution</li>
+        </ul>
+
+        <div class="spotlight-cta">
+          <a class="spotlight-btn spotlight-btn-primary" href="products.html">
+            Shop Exclusive
+          </a>
+          <a class="spotlight-btn spotlight-btn-ghost" href="sunscreen.html">
+            Why it’s sustainable →
+          </a>
+        </div>
+      </div>
+
+      <div class="spotlight-right">
+        <div class="spotlight-media">
+          <img
+            src="images/sunscreen-hero.png"
+            alt="NCCS Sustainable Sunscreen"
+            class="spotlight-image"
+            onerror="this.style.display='none';"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <footer class="footer">
+        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
