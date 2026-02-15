@@ -18,6 +18,8 @@
   </div>
 
 
+  <body>
+
   <!-- Header -->
   <header class="header">
     <div class="header-inner">
@@ -46,18 +48,16 @@
           </div>
         </div>
 
-              <!-- ✅ SERVICES dropdown (click to open) -->
-      <div class="nav-dropdown" tabindex="0">
-        <a class="mainnav-link" href="services.html" aria-haspopup="true" aria-expanded="false">
-          SERVICES <span class="chev">▾</span>
-        </a>
-        <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-          <!-- ✅ Pharmacy Services goes to THIS page -->
-          <a class="dropdown-link" href="services.html">Pharmacy Services</a>
-          <!-- ✅ Specialised page -->
-          <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+        <div class="nav-dropdown" tabindex="0">
+          <a class="mainnav-link" href="services.html" aria-haspopup="true" aria-expanded="false">
+            SERVICES <span class="chev">▾</span>
+          </a>
+          <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+            <a class="dropdown-link" href="services.html">Pharmacy Services</a>
+            <a class="dropdown-link" href="specialised-pharmacy-services.html">Specialised Pharmacy Services</a>
+          </div>
         </div>
-      </div>
+
         <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
         <a class="mainnav-link" href="products.html">PRODUCTS</a>
         <a class="mainnav-link" href="locator.html">LOCATOR</a>
@@ -67,82 +67,68 @@
       </nav>
     </div>
   </header>
-      <!-- ✅ HERO (different images from diabetes) -->
-      <section class="sps-hero" style="--sps-hero:url('images/team.png');">
-        <div class="sps-hero-overlay">
-          <h1 class="sps-title">Specialised Pharmacy Services</h1>
-          <p class="sps-subtitle">
-            Targeted support programmes to help you manage long-term conditions confidently.
-          </p>
-        </div>
-      </section>
 
-      <!-- ✅ Cards (YOUR REAL FILENAMES) -->
-      <section class="sps-grid" aria-label="Specialised services list">
+  <!-- ✅ THIS is what makes it align like your other pages -->
+  <main class="container">
 
-        <!-- 01 Diabetes -->
-        <article class="sps-card">
-          <div class="sps-img sps-img--top">
-            <img src="images/spec-diabetes.png" alt="Diabetes counselling support">
-          </div>
-          <div class="sps-content">
-            <h2 class="sps-h2">Diabetes Counselling Service</h2>
-            <p class="sps-p">
-              Personalised support for glucose monitoring, lifestyle habits, and medication confidence.
-            </p>
-          </div>
-        </article>
-
-        <!-- 02 Weight -->
-        <article class="sps-card">
-          <div class="sps-img">
-            <img src="images/spec-weight.png" alt="Weight counselling support">
-          </div>
-          <div class="sps-content">
-            <h2 class="sps-h2">Weight Counselling Service</h2>
-            <p class="sps-p">
-              Structured guidance to build sustainable routines and improve long-term health outcomes.
-            </p>
-          </div>
-        </article>
-
-        <!-- 03 Smoking -->
-        <article class="sps-card">
-          <div class="sps-img">
-            <img src="images/spec-smoking.png" alt="Smoking cessation support">
-          </div>
-          <div class="sps-content">
-            <h2 class="sps-h2">Smoking Cessation Service</h2>
-            <p class="sps-p">
-              Evidence-based quitting support with step-by-step planning and pharmacist follow-ups.
-            </p>
-          </div>
-        </article>
-
-        <!-- 04 Chronic -->
-        <article class="sps-card">
-          <div class="sps-img">
-            <img src="images/spec-chronic.png" alt="Chronic disease management support">
-          </div>
-          <div class="sps-content">
-            <h2 class="sps-h2">Chronic Disease Management</h2>
-            <p class="sps-p">
-              Ongoing care support for long-term conditions with monitoring and medication review guidance.
-            </p>
-          </div>
-        </article>
-
-      </section>
-    </div>
-  </main>
-
-    <footer class="footer">
-        © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
-      </footer>
+    <section class="sps-hero" style="--sps-hero:url('images/team.png');">
+      <div class="sps-hero-overlay">
+        <h1 class="sps-title">Specialised Pharmacy Services</h1>
+        <p class="sps-subtitle">
+          Targeted support programmes to help you manage long-term conditions confidently.
+        </p>
+      </div>
     </section>
+
+    <section class="sps-grid" aria-label="Specialised services list">
+      <article class="sps-card">
+        <div class="sps-img sps-img--top">
+          <img src="images/spec-diabetes.png" alt="Diabetes counselling support">
+        </div>
+        <div class="sps-content">
+          <h2 class="sps-h2">Diabetes Counselling Service</h2>
+          <p class="sps-p">Personalised support for glucose monitoring, lifestyle habits, and medication confidence.</p>
+        </div>
+      </article>
+
+      <article class="sps-card">
+        <div class="sps-img">
+          <img src="images/spec-weight.png" alt="Weight counselling support">
+        </div>
+        <div class="sps-content">
+          <h2 class="sps-h2">Weight Counselling Service</h2>
+          <p class="sps-p">Structured guidance to build sustainable routines and improve long-term health outcomes.</p>
+        </div>
+      </article>
+
+      <article class="sps-card">
+        <div class="sps-img">
+          <img src="images/spec-smoking.png" alt="Smoking cessation support">
+        </div>
+        <div class="sps-content">
+          <h2 class="sps-h2">Smoking Cessation Service</h2>
+          <p class="sps-p">Evidence-based quitting support with step-by-step planning and pharmacist follow-ups.</p>
+        </div>
+      </article>
+
+      <article class="sps-card">
+        <div class="sps-img">
+          <img src="images/spec-chronic.png" alt="Chronic disease management support">
+        </div>
+        <div class="sps-content">
+          <h2 class="sps-h2">Chronic Disease Management</h2>
+          <p class="sps-p">Ongoing care support for long-term conditions with monitoring and medication review guidance.</p>
+        </div>
+      </article>
+    </section>
+
   </main>
 
-  <!-- ✅ Dropdown click logic -->
+  <footer class="footer">
+    © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+  </footer>
+
+  <!-- Dropdown click logic (keep yours) -->
   <script>
     (function () {
       const dd = document.querySelector(".nav-dropdown");
@@ -171,7 +157,6 @@
         if (e.key === "Escape") close();
       });
 
-      // Ensure open class forces visibility even if your CSS is hover-based
       const style = document.createElement("style");
       style.textContent = `
         .nav-dropdown.is-open .dropdown-menu{
@@ -181,5 +166,5 @@
       document.head.appendChild(style);
     })();
   </script>
+
 </body>
-</html>
