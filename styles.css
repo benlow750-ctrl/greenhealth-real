@@ -11947,4 +11947,16 @@ main #conclusion .conclusion-block{
     grid-template-columns: 1fr;
   }
 }
+/* ===============================
+   FIX: Reflection paragraphs spacing
+   =============================== */
+
+.msec-body p{
+  margin: 0 0 12px !important;
+  line-height: 1.7 !important;
+}
+
+.msec-body p:last-child{
+  margin-bottom: 0 !important;
+}
 
