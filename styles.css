@@ -11959,4 +11959,20 @@ main #conclusion .conclusion-block{
 .msec-body p:last-child{
   margin-bottom: 0 !important;
 }
+/* =====================
+   Global Font: Inter
+   ===================== */
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI,
+               Roboto, Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+button,
+input,
+select,
+textarea,
+a {
+  font-family: inherit;
+}
 
