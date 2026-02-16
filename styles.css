@@ -11712,4 +11712,239 @@ details[open] summary::after{
 
 .slider-btn[data-left]{ left: 10px; }
 .slider-btn[data-right]{ right: 10px; }
+/* About Us – Conclusion section */
+#conclusion p:last-child {
+  margin-bottom: 0;
+}
+/* ================= About – Conclusion ================= */
+#conclusion .conclusion-wrap{
+  padding: 18px;
+}
+
+#conclusion .conclusion-top h2{
+  margin: 10px 0 8px;
+}
+
+#conclusion .conclusion-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+#conclusion .conclusion-block{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(34, 197, 94, 0.06);
+}
+
+#conclusion .conclusion-block h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--text);
+}
+
+#conclusion .conclusion-cta{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#conclusion .conclusion-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 920px){
+  #conclusion .conclusion-grid{
+    grid-template-columns: 1fr;
+  }
+  #conclusion .conclusion-cta{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ================================
+   HARD OVERRIDE — CONCLUSION WIDTH
+   ================================ */
+
+/* Make the section itself full width */
+main #conclusion{
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Break out of centered containers */
+main #conclusion.section{
+  max-width: 100% !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* Force the card wrapper to stretch */
+main #conclusion .conclusion-wrap{
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+/* Override ANY card width restriction */
+main #conclusion .card{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Make grid consume all space */
+main #conclusion .conclusion-grid{
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+/* Prevent narrow columns */
+main #conclusion .conclusion-block{
+  width: 100% !important;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  main #conclusion .conclusion-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+/* =========================================
+   HARD OVERRIDE: make #conclusion fill row
+   (fixes "stuck in left column" white space)
+   Paste at VERY BOTTOM of styles.css
+   ========================================= */
+
+/* If #conclusion accidentally lives inside a grid (2-col / 3-col), force it to span full row */
+#conclusion{
+  grid-column: 1 / -1 !important;   /* <-- KEY FIX for your screenshot */
+  justify-self: stretch !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* If the parent is flex instead of grid, force it to take a full row */
+#conclusion{
+  flex: 0 0 100% !important;
+}
+
+/* Ensure the inner card/wrapper also stretches */
+#conclusion .conclusion-wrap,
+#conclusion .card{
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Make the inside grid use the available width */
+#conclusion .conclusion-grid{
+  width: 100% !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  #conclusion .conclusion-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ================================
+   ABOUT — Conclusion (Full Width)
+   ================================ */
+
+.conclusion{
+  margin-top: 22px;
+  width: 100%;
+}
+
+.conclusion .conclusion-wrap{
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.conclusion-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(22,163,74,.28);
+  background: rgba(34,197,94,.12);
+}
+
+.conclusion-title{
+  margin: 10px 0 8px;
+  font-size: 20px;
+  font-weight: 1000;
+  letter-spacing: -0.2px;
+}
+
+.conclusion-text{
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 80ch;
+}
+
+.conclusion-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.conclusion-block{
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(34,197,94,.06);
+  padding: 14px;
+  height: 100%;
+}
+
+.conclusion-block h3{
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 1000;
+}
+
+.conclusion-block p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.conclusion-actions{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.conclusion-cta{
+  margin-top: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (max-width: 900px){
+  .conclusion-grid{
+    grid-template-columns: 1fr;
+  }
+}
 

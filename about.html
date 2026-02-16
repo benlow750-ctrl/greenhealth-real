@@ -622,41 +622,77 @@
         </div>
       </div>
     </section>
-
-  </main>
-
-     <footer class="footer">
-        © 2026 GreenHealth Pharmacy • Healthy Earth, Healthy You
-      </footer>
     </section>
+
+    <!-- ✅ Conclusion (FULL WIDTH) -->
+    <section id="conclusion" class="conclusion">
+      <div class="conclusion-wrap card">
+     
+        <h2 class="conclusion-title">Whats Next for Us?</h2>
+
+        <p class="conclusion-text">
+          GreenHealth will continue expanding our range of sustainable healthcare products, allowing you to make eco-conscious choices without compromising quality or affordability.
+        </p>
+
+        <div class="conclusion-grid">
+          <div class="conclusion-block">
+            <h3>More trusted partnerships</h3>
+            <p> We’ll form new partnerships with eco-conscious, reputable brands to bring you more exclusive
+              sustainable products and member-only discounts.
+            </p>
+          </div>
+
+          <div class="conclusion-block">
+            <h3>Better rewards, made simpler</h3>
+            <p>
+              We’ll strengthen our Green Credit loyalty programme through deeper brand collaborations. With ongoing
+              mobile app improvements, members will get promotion updates, early access to exclusive deals, and
+              personalised notifications—making sustainable healthcare more convenient and rewarding.
+            </p>
+          </div>
+
+          <div class="conclusion-block">
+            <h3>Growing across Singapore</h3>
+            <p>
+              As we grow, GreenHealth aims to bring this sustainability-first pharmacy model to more eco-focused
+              neighbourhoods across Singapore, so more communities can benefit from responsible and accessible care.
+            </p>
+          </div>
+        </div>
+
+        <div class="conclusion-actions">
+          <a class="btn2 primary" href="member.html">Join as a Member</a>
+          <a class="btn2" href="products.html">Explore Sustainable Products</a>
+        </div>
+
+        <p class="conclusion-cta">
+          Join us now in building a healthier community and a more sustainable future.
+        </p>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    © 2026 GreenHealth Pharmacy • Healthier living, zero-waste innovation
+  </footer>
 
   <script src="about-timeline.js"></script>
   <script src="script.js"></script>
 
-  <!-- ✅ Added: Accordion behavior (only 1 open at a time) -->
   <script>
     (function () {
       const items = Array.from(document.querySelectorAll(".wmuu-item"));
-
       items.forEach((it) => {
         it.addEventListener("toggle", () => {
           if (!it.open) return;
-
-          // close other items
-          items.forEach((other) => {
-            if (other !== it) other.open = false;
-          });
-
-          // keep aria-expanded correct
+          items.forEach((other) => { if (other !== it) other.open = false; });
           items.forEach((d) => {
             const sum = d.querySelector("summary");
             if (sum) sum.setAttribute("aria-expanded", d.open ? "true" : "false");
           });
         });
       });
-
-      // init aria on load
       items.forEach((d) => {
         const sum = d.querySelector("summary");
         if (sum) sum.setAttribute("aria-expanded", d.open ? "true" : "false");
